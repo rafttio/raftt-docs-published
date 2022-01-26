@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[775],{9842:function(t){t.exports=JSON.parse('{"title":"Intro","slug":"intro","permalink":"/docs/intro","navigation":{"next":{"title":"Welcome to Raftt","permalink":"/docs/intro/raftt"}}}')}}]);
