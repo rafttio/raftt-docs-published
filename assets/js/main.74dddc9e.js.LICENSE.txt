@@ -8,13 +8,6 @@ object-assign
  * @license MIT */
 
 /*!
-   * get-value <https://github.com/jonschlinkert/get-value>
-   *
-   * Copyright (c) 2014-2018, Jon Schlinkert.
-   * Released under the MIT License.
-   */
-
-/*!
  * lunr.Builder
  * Copyright (C) 2020 Oliver Nightingale
  */
@@ -122,13 +115,3 @@ object-assign
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-/**!
-   * storejs v2.0.1
-   * Local storage localstorage package provides a simple API
-   * 
-   * Copyright (c) 2021 kenny wang <wowohoo@qq.com>
-   * https://jaywcjlove.github.io/store.js/
-   * 
-   * Licensed under the MIT license.
-   */
