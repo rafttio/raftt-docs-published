@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[214],{9157:function(t){t.exports=JSON.parse('{"title":"Configuration","slug":"config","permalink":"/docs/config","navigation":{"previous":{"title":"Connect Mode Tutorial","permalink":"/docs/basics/tutorials/connect_mode"},"next":{"title":"raftt.yml","permalink":"/docs/config/raftt.yml"}}}')}}]);
