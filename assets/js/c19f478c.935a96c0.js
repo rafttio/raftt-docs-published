@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[898],{6581:function(t){t.exports=JSON.parse('{"title":"Getting Started","slug":"basics","permalink":"/basics","navigation":{"previous":{"title":"Install Raftt","permalink":"/intro/installation"},"next":{"title":"Spawn Your First Environment","permalink":"/basics/quickstart"}}}')}}]);
