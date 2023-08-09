@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[195],{6035:function(e){e.exports=JSON.parse('{"title":"Key Concepts","slug":"concepts","permalink":"/concepts","navigation":{"previous":{"title":"Database Seeding","permalink":"/config/db_seeding"},"next":{"title":"Dev-mode","permalink":"/concepts/dev_mode"}}}')}}]);
