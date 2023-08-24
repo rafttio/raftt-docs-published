@@ -1,9 +1,9 @@
 <!DOCTYPE html><html class="no-js" lang="en"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html">
 
-    <!-- Generated with Sphinx 7.2.2 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.2.3 and Furo 2023.07.26 -->
         <title>Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -772,11 +772,24 @@ This is useful to prevent GitOps tools from reverting the changes made by Raftt 
 
 <dl class="py function">
 <dt class="sig sig-object py" id="api.deploy">
-<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">deploy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.Resources" title="api.Resources"><span class="pre">Resources</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#deploy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.deploy" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">deploy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.Resources" title="api.Resources"><span class="pre">Resources</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod"><span class="pre">workload.Pod</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment"><span class="pre">workload.Deployment</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet"><span class="pre">workload.StatefulSet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Ingress</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Service</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Secret</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ServiceAccount</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Role</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.RoleBinding</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ConfigMap</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#deploy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.deploy" title="Link to this definition">#</a></dt>
 <dd><p>Mark the resources to be deployed when the <code class="docutils literal notranslate"><span class="pre">.raftt</span></code> file interpretation is completed after <code class="docutils literal notranslate"><span class="pre">up</span></code>, <code class="docutils literal notranslate"><span class="pre">rebuild</span></code>, and <code class="docutils literal notranslate"><span class="pre">dev</span></code> commands.</p>
+<p>:param resources (<a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> <a href="#id1"><span class="problematic" id="id2">|</span></a>:
+:param <code class="xref py py-class docutils literal notranslate"><span class="pre">Pod</span></code>:
+:param <code class="xref py py-class docutils literal notranslate"><span class="pre">Deployment</span></code> <a href="#id3"><span class="problematic" id="id4">|</span></a>:
+:param <code class="xref py py-class docutils literal notranslate"><span class="pre">StatefulSet</span></code> <a href="#id5"><span class="problematic" id="id6">|</span></a>:
+:param <code class="xref py py-class docutils literal notranslate"><span class="pre">Ingress</span></code> <a href="#id7"><span class="problematic" id="id8">|</span></a>:
+:param <code class="xref py py-class docutils literal notranslate"><span class="pre">Service</span></code> <a href="#id9"><span class="problematic" id="id10">|</span></a>:
+:param <code class="xref py py-class docutils literal notranslate"><span class="pre">Secret</span></code> <a href="#id11"><span class="problematic" id="id12">|</span></a>:
+:param <code class="xref py py-class docutils literal notranslate"><span class="pre">ServiceAccount</span></code> <a href="#id13"><span class="problematic" id="id14">|</span></a>:
+:param <code class="xref py py-class docutils literal notranslate"><span class="pre">Role</span></code> <a href="#id15"><span class="problematic" id="id16">|</span></a>:
+:param <code class="xref py py-class docutils literal notranslate"><span class="pre">RoleBinding</span></code> <a href="#id17"><span class="problematic" id="id18">|</span></a>:
+:param <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigMap</span></code>): The K8s objects to be deployed.
+:param Can be either of Resources type or a single:
+:param resource of any supported type.:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>resources</strong> (<a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a>) – The K8s objects to be deployed.</p>
+<dd class="field-odd"><p><strong>resources</strong> (<a class="reference internal" href="#api.Resources" title="api.Resources"><em>Resources</em></a><em> | </em><a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod"><em>Pod</em></a><em> | </em><a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment"><em>Deployment</em></a><em> | </em><a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet"><em>StatefulSet</em></a><em> | </em><em>Ingress</em><em> | </em><em>Service</em><em> | </em><em>Secret</em><em> | </em><em>ServiceAccount</em><em> | </em><em>Role</em><em> | </em><em>RoleBinding</em><em> | </em><em>ConfigMap</em>) – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -982,6 +995,20 @@ This also allows the volume to be saved and loaded using <code class="docutils l
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#api.volumes.VolumeInitializer" title="api.volumes.VolumeInitializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeInitializer</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="api.namespace">
+<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">namespace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#namespace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.namespace" title="Link to this definition">#</a></dt>
+<dd><p>Returns the namespace where the current environment is deployed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the name of the namespace where the current environment is deployed.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1695,7 +1722,7 @@ Decoding fails if src is not a valid JSON string.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>src</strong> (<em>str</em>) – source JSON string to encode</p></li>
 <li><p><strong>prefix</strong> (<em>str</em><em>, </em><em>optional</em>) – string prefix that will be prepended to each line.. Defaults to “”.</p></li>
-<li><p><strong>indent</strong> (<em>str</em><em>, </em><em>optional</em>) – string that will be used to represent indentations. Defaults to ”       “.</p></li>
+<li><p><strong>indent</strong> (<em>str</em><em>, </em><em>optional</em>) – string that will be used to represent indentations. Defaults to “       “.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1870,6 +1897,7 @@ Decoding fails if src is not a valid YAML string.</p>
 <li><a class="reference internal" href="#api.kustomize_build"><code class="docutils literal notranslate"><span class="pre">kustomize_build()</span></code></a></li>
 <li><a class="reference internal" href="#api.load_docker_compose"><code class="docutils literal notranslate"><span class="pre">load_docker_compose()</span></code></a></li>
 <li><a class="reference internal" href="#api.mongodb_volume_initializer"><code class="docutils literal notranslate"><span class="pre">mongodb_volume_initializer()</span></code></a></li>
+<li><a class="reference internal" href="#api.namespace"><code class="docutils literal notranslate"><span class="pre">namespace()</span></code></a></li>
 <li><a class="reference internal" href="#api.namespace_resources"><code class="docutils literal notranslate"><span class="pre">namespace_resources()</span></code></a></li>
 <li><a class="reference internal" href="#api.on_hibernation"><code class="docutils literal notranslate"><span class="pre">on_hibernation()</span></code></a></li>
 <li><a class="reference internal" href="#api.on_init"><code class="docutils literal notranslate"><span class="pre">on_init()</span></code></a></li>

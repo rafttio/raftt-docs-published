@@ -2,7 +2,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html">
 
-    <!-- Generated with Sphinx 7.2.2 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.2.3 and Furo 2023.07.26 -->
         <title>api - Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -645,11 +645,35 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
 <div class="viewcode-block" id="deploy">
 <a class="viewcode-back" href="../index.html#api.deploy">[docs]</a>
-<span class="k">def</span> <span class="nf">deploy</span><span class="p">(</span><span class="n">resources</span><span class="p">:</span> <span class="n">Resources</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">deploy</span><span class="p">(</span>
+    <span class="n">resources</span><span class="p">:</span> <span class="n">Resources</span>
+    <span class="o">|</span> <span class="n">Pod</span>
+    <span class="o">|</span> <span class="n">Deployment</span>
+    <span class="o">|</span> <span class="n">StatefulSet</span>
+    <span class="o">|</span> <span class="n">Ingress</span>
+    <span class="o">|</span> <span class="n">Service</span>
+    <span class="o">|</span> <span class="n">Secret</span>
+    <span class="o">|</span> <span class="n">ServiceAccount</span>
+    <span class="o">|</span> <span class="n">Role</span>
+    <span class="o">|</span> <span class="n">RoleBinding</span>
+    <span class="o">|</span> <span class="n">ConfigMap</span><span class="p">,</span>
+<span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Mark the resources to be deployed when the ``.raftt`` file interpretation is completed after ``up``, ``rebuild``, and ``dev`` commands.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        resources (:class:`~Resources`): The K8s objects to be deployed.</span>
+<span class="sd">        resources (:class:`~Resources` |</span>
+<span class="sd">        :class:`~Pod`</span>
+<span class="sd">        :class:`~Deployment` |</span>
+<span class="sd">        :class:`~StatefulSet` |</span>
+<span class="sd">        :class:`~Ingress` |</span>
+<span class="sd">        :class:`~Service` |</span>
+<span class="sd">        :class:`~Secret` |</span>
+<span class="sd">        :class:`~ServiceAccount` |</span>
+<span class="sd">        :class:`~Role` |</span>
+<span class="sd">        :class:`~RoleBinding` |</span>
+<span class="sd">        :class:`~ConfigMap`): The K8s objects to be deployed.</span>
+<span class="sd">        Can be either of Resources type or a single</span>
+<span class="sd">        resource of any supported type.</span>
 <span class="sd">    """</span>
     <span class="k">pass</span></div>
 
@@ -867,6 +891,18 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
 <span class="sd">    Returns:</span>
 <span class="sd">        :class:`~volumes.VolumeInitializer`: A volume initializer object can be assigned as an :class:`~volumes.Volume.initializer` of a :class:`~volumes.Volume` object.</span>
+<span class="sd">    """</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="namespace">
+<a class="viewcode-back" href="../index.html#api.namespace">[docs]</a>
+<span class="k">def</span> <span class="nf">namespace</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Returns the namespace where the current environment is deployed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: the name of the namespace where the current environment is deployed.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
