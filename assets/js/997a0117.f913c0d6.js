@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[195],{6035:e=>{e.exports=JSON.parse('{"title":"Key Concepts","slug":"concepts","permalink":"/concepts","navigation":{"previous":{"title":"Private Image Registries","permalink":"/config/image_registries"},"next":{"title":"Dev-mode","permalink":"/concepts/dev_mode"}}}')}}]);
