@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[678],{8951:e=>{e.exports=JSON.parse('{"title":"Guides","slug":"guides","permalink":"/guides","navigation":{"previous":{"title":"Onboard Your Project","permalink":"/basics/onboard_project"},"next":{"title":"Working with Compiled Languages","permalink":"/guides/compiled_languages"}}}')}}]);
