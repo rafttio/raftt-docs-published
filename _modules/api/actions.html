@@ -1,8 +1,8 @@
-<!DOCTYPE html><html class="no-js" lang="en" data-content_root="../../"><head><meta charset="utf-8">
+<!DOCTYPE html><html class="no-js" lang="en"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html">
 
-    <!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
+    <!-- Generated with Sphinx 7.0.1 and Furo 2023.07.26 -->
         <title>api.actions - Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -442,30 +442,21 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="kn">from</span> <span class="nn">api.workload</span> <span class="kn">import</span> <span class="n">Workload</span>
 
 
-<div class="viewcode-block" id="Action">
-<a class="viewcode-back" href="../../index.html#api.actions.Action">[docs]</a>
-<span class="k">class</span> <span class="nc">Action</span><span class="p">:</span>
+<div class="viewcode-block" id="Action"><a class="viewcode-back" href="../../index.html#api.actions.Action">[docs]</a><span class="k">class</span> <span class="nc">Action</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Abstract type which represents an action triggered by an event."""</span></div>
 
 
-
-<div class="viewcode-block" id="CMD">
-<a class="viewcode-back" href="../../index.html#api.actions.CMD">[docs]</a>
-<span class="k">class</span> <span class="nc">CMD</span><span class="p">:</span>
+<div class="viewcode-block" id="CMD"><a class="viewcode-back" href="../../index.html#api.actions.CMD">[docs]</a><span class="k">class</span> <span class="nc">CMD</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Represents a :class:`~api.actions.Action` type that receives a command to execute as a string or an iterable of strings and a workload to execute the command on."""</span>
 
-<div class="viewcode-block" id="CMD.__init__">
-<a class="viewcode-back" href="../../index.html#api.actions.CMD.__init__">[docs]</a>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workload</span><span class="p">:</span> <span class="n">Workload</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">container</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">):</span>
+<div class="viewcode-block" id="CMD.__init__"><a class="viewcode-back" href="../../index.html#api.actions.CMD.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workload</span><span class="p">:</span> <span class="n">Workload</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">container</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""Create a new CMD object.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            workload (:class:`~workload.Workload`): Workload instance to run the action on.</span>
 <span class="sd">            cmd (str | Iterable[str]): String or iterable of strings to be executed as a command on the specified workload.</span>
 <span class="sd">            container (str, optional): name of the container to run the action on. Defaults to "", which means the container is the workload's default container.</span>
-<span class="sd">        """</span></div>
-</div>
-
+<span class="sd">        """</span></div></div>
 </pre></div>
         </article>
       </div>
