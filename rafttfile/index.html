@@ -1,9 +1,9 @@
 <!DOCTYPE html><html class="no-js" lang="en" data-content_root="./"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/">
 <link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html">
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
         <title>Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -108,7 +108,7 @@ body[data-theme="dark"] .highlight .x { color: #d0d0d0 } /* Other */
 body[data-theme="dark"] .highlight .p { color: #d0d0d0 } /* Punctuation */
 body[data-theme="dark"] .highlight .ch { color: #ababab; font-style: italic } /* Comment.Hashbang */
 body[data-theme="dark"] .highlight .cm { color: #ababab; font-style: italic } /* Comment.Multiline */
-body[data-theme="dark"] .highlight .cp { color: #ff3a3a; font-weight: bold } /* Comment.Preproc */
+body[data-theme="dark"] .highlight .cp { color: #cd2828; font-weight: bold } /* Comment.Preproc */
 body[data-theme="dark"] .highlight .cpf { color: #ababab; font-style: italic } /* Comment.PreprocFile */
 body[data-theme="dark"] .highlight .c1 { color: #ababab; font-style: italic } /* Comment.Single */
 body[data-theme="dark"] .highlight .cs { color: #e50808; font-weight: bold; background-color: #520000 } /* Comment.Special */
@@ -193,7 +193,7 @@ body:not([data-theme="light"]) .highlight .x { color: #d0d0d0 } /* Other */
 body:not([data-theme="light"]) .highlight .p { color: #d0d0d0 } /* Punctuation */
 body:not([data-theme="light"]) .highlight .ch { color: #ababab; font-style: italic } /* Comment.Hashbang */
 body:not([data-theme="light"]) .highlight .cm { color: #ababab; font-style: italic } /* Comment.Multiline */
-body:not([data-theme="light"]) .highlight .cp { color: #ff3a3a; font-weight: bold } /* Comment.Preproc */
+body:not([data-theme="light"]) .highlight .cp { color: #cd2828; font-weight: bold } /* Comment.Preproc */
 body:not([data-theme="light"]) .highlight .cpf { color: #ababab; font-style: italic } /* Comment.PreprocFile */
 body:not([data-theme="light"]) .highlight .c1 { color: #ababab; font-style: italic } /* Comment.Single */
 body:not([data-theme="light"]) .highlight .cs { color: #e50808; font-weight: bold; background-color: #520000 } /* Comment.Special */
@@ -1499,12 +1499,35 @@ can be mounted using Workload.mount()</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="api.events.OnContainerStart">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">events.</span></span><span class="sig-name descname"><span class="pre">OnContainerStart</span></span><a class="reference internal" href="_modules/api/events.html#OnContainerStart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.events.OnContainerStart" title="Link to this definition">#</a></dt>
+<dd><p>Represents an Event which is triggered when a container starts.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="api.events.OnContainerStart.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><span class="pre">workload.Workload</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">container</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_main_process</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_if_failed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/events.html#OnContainerStart.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.events.OnContainerStart.__init__" title="Link to this definition">#</a></dt>
+<dd><p>Create a new OnContainerStart event.
+This event is used to trigger actions using Raftt’s hooks mechanism.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workload</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code>) – Workload instance for which the hook is triggered.</p></li>
+<li><p><strong>container</strong> (<em>str</em>) – Name of the container for which the hook is triggered. Defaults to “”, which means the container is the workload’s default container.</p></li>
+<li><p><strong>block_main_process</strong> (<em>bool</em>) – Whether or not to wait for the hook to finish before starting the main process. Defaults to True.</p></li>
+<li><p><strong>start_if_failed</strong> (<em>bool</em>) – Whether or not to start the main process if the hook actions fail. Only relevant if block_main_process is True. Defaults to False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="api.events.OnFileChanged">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">events.</span></span><span class="sig-name descname"><span class="pre">OnFileChanged</span></span><a class="reference internal" href="_modules/api/events.html#OnFileChanged"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.events.OnFileChanged" title="Link to this definition">#</a></dt>
 <dd><p>Represents an <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code> which triggers on a file being changed on a workload.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="api.events.OnFileChanged.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><span class="pre">workload.Workload</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">patterns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">collections.abc.Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/events.html#OnFileChanged.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.events.OnFileChanged.__init__" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><span class="pre">workload.Workload</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">patterns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">collections.abc.Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/events.html#OnFileChanged.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.events.OnFileChanged.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Create a new <code class="xref py py-class docutils literal notranslate"><span class="pre">OnFileChanged</span></code> event.
 This event is used to trigger actions using Raftt’s file watching mechanism.
 See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#file-watching">here</a> for more information.</p>
@@ -1513,6 +1536,7 @@ See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#f
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>workload</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code>) – Workload instance to watch for file changes on.</p></li>
 <li><p><strong>patterns</strong> (<em>str</em><em> | </em><em>Iterable</em><em>[</em><em>str</em><em>]</em>) – String or iterable of strings of glob patterns describing the files being watched.</p></li>
+<li><p><strong>container</strong> (<em>str</em>) – Name of the container for which the hook is triggered. Defaults to “”, which means the container is the workload’s default container.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1715,7 +1739,7 @@ Decoding fails if src is not a valid JSON string.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>src</strong> (<em>str</em>) – source JSON string to encode</p></li>
 <li><p><strong>prefix</strong> (<em>str</em><em>, </em><em>optional</em>) – string prefix that will be prepended to each line.. Defaults to “”.</p></li>
-<li><p><strong>indent</strong> (<em>str</em><em>, </em><em>optional</em>) – string that will be used to represent indentations. Defaults to “       “.</p></li>
+<li><p><strong>indent</strong> (<em>str</em><em>, </em><em>optional</em>) – string that will be used to represent indentations. Defaults to ”       “.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1938,6 +1962,10 @@ Decoding fails if src is not a valid YAML string.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#api.events.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+<li><a class="reference internal" href="#api.events.OnContainerStart"><code class="docutils literal notranslate"><span class="pre">OnContainerStart</span></code></a><ul>
+<li><a class="reference internal" href="#api.events.OnContainerStart.__init__"><code class="docutils literal notranslate"><span class="pre">OnContainerStart.__init__()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#api.events.OnFileChanged"><code class="docutils literal notranslate"><span class="pre">OnFileChanged</span></code></a><ul>
 <li><a class="reference internal" href="#api.events.OnFileChanged.__init__"><code class="docutils literal notranslate"><span class="pre">OnFileChanged.__init__()</span></code></a></li>
 </ul>

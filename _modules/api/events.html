@@ -2,7 +2,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html">
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
         <title>api.events - Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -107,7 +107,7 @@ body[data-theme="dark"] .highlight .x { color: #d0d0d0 } /* Other */
 body[data-theme="dark"] .highlight .p { color: #d0d0d0 } /* Punctuation */
 body[data-theme="dark"] .highlight .ch { color: #ababab; font-style: italic } /* Comment.Hashbang */
 body[data-theme="dark"] .highlight .cm { color: #ababab; font-style: italic } /* Comment.Multiline */
-body[data-theme="dark"] .highlight .cp { color: #ff3a3a; font-weight: bold } /* Comment.Preproc */
+body[data-theme="dark"] .highlight .cp { color: #cd2828; font-weight: bold } /* Comment.Preproc */
 body[data-theme="dark"] .highlight .cpf { color: #ababab; font-style: italic } /* Comment.PreprocFile */
 body[data-theme="dark"] .highlight .c1 { color: #ababab; font-style: italic } /* Comment.Single */
 body[data-theme="dark"] .highlight .cs { color: #e50808; font-weight: bold; background-color: #520000 } /* Comment.Special */
@@ -192,7 +192,7 @@ body:not([data-theme="light"]) .highlight .x { color: #d0d0d0 } /* Other */
 body:not([data-theme="light"]) .highlight .p { color: #d0d0d0 } /* Punctuation */
 body:not([data-theme="light"]) .highlight .ch { color: #ababab; font-style: italic } /* Comment.Hashbang */
 body:not([data-theme="light"]) .highlight .cm { color: #ababab; font-style: italic } /* Comment.Multiline */
-body:not([data-theme="light"]) .highlight .cp { color: #ff3a3a; font-weight: bold } /* Comment.Preproc */
+body:not([data-theme="light"]) .highlight .cp { color: #cd2828; font-weight: bold } /* Comment.Preproc */
 body:not([data-theme="light"]) .highlight .cpf { color: #ababab; font-style: italic } /* Comment.PreprocFile */
 body:not([data-theme="light"]) .highlight .c1 { color: #ababab; font-style: italic } /* Comment.Single */
 body:not([data-theme="light"]) .highlight .cs { color: #e50808; font-weight: bold; background-color: #520000 } /* Comment.Special */
@@ -453,7 +453,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
 <div class="viewcode-block" id="OnFileChanged.__init__">
 <a class="viewcode-back" href="../../index.html#api.events.OnFileChanged.__init__">[docs]</a>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workload</span><span class="p">:</span> <span class="n">Workload</span><span class="p">,</span> <span class="n">patterns</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workload</span><span class="p">:</span> <span class="n">Workload</span><span class="p">,</span> <span class="n">patterns</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">container</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""Create a new :class:`~events.OnFileChanged` event.</span>
 <span class="sd">        This event is used to trigger actions using Raftt's file watching mechanism.</span>
 <span class="sd">        See `here &lt;https://docs.raftt.io/config/rafttfile#file-watching&gt;`__ for more information.</span>
@@ -461,6 +461,30 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">        Args:</span>
 <span class="sd">            workload (:class:`~workload.Workload`): Workload instance to watch for file changes on.</span>
 <span class="sd">            patterns (str | Iterable[str]): String or iterable of strings of glob patterns describing the files being watched.</span>
+<span class="sd">            container (str): Name of the container for which the hook is triggered. Defaults to "", which means the container is the workload's default container.</span>
+<span class="sd">        """</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="OnContainerStart">
+<a class="viewcode-back" href="../../index.html#api.events.OnContainerStart">[docs]</a>
+<span class="k">class</span> <span class="nc">OnContainerStart</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Represents an Event which is triggered when a container starts."""</span>
+
+<div class="viewcode-block" id="OnContainerStart.__init__">
+<a class="viewcode-back" href="../../index.html#api.events.OnContainerStart.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">workload</span><span class="p">:</span> <span class="n">Workload</span><span class="p">,</span> <span class="n">container</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="n">block_main_process</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">start_if_failed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Create a new OnContainerStart event.</span>
+<span class="sd">        This event is used to trigger actions using Raftt's hooks mechanism.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            workload (:class:`~workload.Workload`): Workload instance for which the hook is triggered.</span>
+<span class="sd">            container (str): Name of the container for which the hook is triggered. Defaults to "", which means the container is the workload's default container.</span>
+<span class="sd">            block_main_process (bool): Whether or not to wait for the hook to finish before starting the main process. Defaults to True.</span>
+<span class="sd">            start_if_failed (bool): Whether or not to start the main process if the hook actions fail. Only relevant if block_main_process is True. Defaults to False.</span>
 <span class="sd">        """</span></div>
 </div>
 
