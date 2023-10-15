@@ -1,8 +1,8 @@
-<!DOCTYPE html><html class="no-js" lang="en" data-content_root="../../"><head><meta charset="utf-8">
+<!DOCTYPE html><html class="no-js" lang="en"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html">
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.2 and Furo 2023.07.26 -->
         <title>api.workload - Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -448,7 +448,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""</span>
-<span class="sd">        Return the name of the :class:`~workload.Workload` object.</span>
+<span class="sd">        Return the name of the ``workload.Workload`` object.</span>
 <span class="sd">        """</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -515,7 +515,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="w">        </span><span class="sd">"""Makes this workload depend on another workload.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            dependency (:class:`~workload.Workload`): The workload this workload depends on.</span>
+<span class="sd">            dependency (``workload.Workload``): The workload this workload depends on.</span>
 <span class="sd">            condition (str, optional): The condition to wait on. Defaults to 'service_started'.</span>
 <span class="sd">                possible values:</span>
 <span class="sd">                - service_started</span>
@@ -540,7 +540,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
     <span class="k">def</span> <span class="nf">set_default_container</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">container_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""Sets the default container for this workload.</span>
 <span class="sd">        This container will be used as default when using CLI commands and ``.raftt`` functions without specifying a container.</span>
-<span class="sd">        If no container is marked using this function or the by &lt;ENTER_DETAILS&gt;, the first container of the :class:`~workload.Workload` object is selected as default.</span>
+<span class="sd">        If no container is marked using this function or the by &lt;ENTER_DETAILS&gt;, the first container of the ``workload.Workload`` object is selected as default.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            container_name (str): The name of the container to mark as the default container.</span>
@@ -576,7 +576,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="w">        </span><span class="sd">"""Sync a path to a container</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            src (str | :class:`~RepoWorkingTree`): Source to sync, if a string assumed relative to the main repository.</span>
+<span class="sd">            src (str | ``RepoWorkingTree``): Source to sync, if a string assumed relative to the main repository.</span>
 <span class="sd">            dst (str): Destination on the container, if not absolute assumed relative to workdir.</span>
 <span class="sd">            ignore (Iterable[str], optional): glob patterns to ignore when syncing. Defaults to [].</span>
 <span class="sd">            container (str, optional): Name of the container to sync to, if empty the default container is selected. Defaults to "".</span>

@@ -1,8 +1,8 @@
-<!DOCTYPE html><html class="no-js" lang="en" data-content_root="../../"><head><meta charset="utf-8">
+<!DOCTYPE html><html class="no-js" lang="en"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html">
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.2 and Furo 2023.07.26 -->
         <title>api.events - Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -449,17 +449,17 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <div class="viewcode-block" id="OnFileChanged">
 <a class="viewcode-back" href="../../index.html#api.events.OnFileChanged">[docs]</a>
 <span class="k">class</span> <span class="nc">OnFileChanged</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""Represents an :class:`~events.Event` which triggers on a file being changed on a workload."""</span>
+<span class="w">    </span><span class="sd">"""Represents an ``events.Event`` which triggers on a file being changed on a workload."""</span>
 
 <div class="viewcode-block" id="OnFileChanged.__init__">
 <a class="viewcode-back" href="../../index.html#api.events.OnFileChanged.__init__">[docs]</a>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workload</span><span class="p">:</span> <span class="n">Workload</span><span class="p">,</span> <span class="n">patterns</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">container</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Create a new :class:`~events.OnFileChanged` event.</span>
+<span class="w">        </span><span class="sd">"""Create a new ``events.OnFileChanged`` event.</span>
 <span class="sd">        This event is used to trigger actions using Raftt's file watching mechanism.</span>
 <span class="sd">        See `here &lt;https://docs.raftt.io/config/rafttfile#file-watching&gt;`__ for more information.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            workload (:class:`~workload.Workload`): Workload instance to watch for file changes on.</span>
+<span class="sd">            workload (``workload.Workload``): Workload instance to watch for file changes on.</span>
 <span class="sd">            patterns (str | Iterable[str]): String or iterable of strings of glob patterns describing the files being watched.</span>
 <span class="sd">            container (str): Name of the container for which the hook is triggered. Defaults to "", which means the container is the workload's default container.</span>
 <span class="sd">        """</span></div>
@@ -481,7 +481,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">        This event is used to trigger actions using Raftt's hooks mechanism.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            workload (:class:`~workload.Workload`): Workload instance for which the hook is triggered.</span>
+<span class="sd">            workload (``workload.Workload``): Workload instance for which the hook is triggered.</span>
 <span class="sd">            container (str): Name of the container for which the hook is triggered. Defaults to "", which means the container is the workload's default container.</span>
 <span class="sd">            block_main_process (bool): Whether or not to wait for the hook to finish before starting the main process. Defaults to True.</span>
 <span class="sd">            start_if_failed (bool): Whether or not to start the main process if the hook actions fail. Only relevant if block_main_process is True. Defaults to False.</span>

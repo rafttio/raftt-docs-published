@@ -1,8 +1,8 @@
-<!DOCTYPE html><html class="no-js" lang="en" data-content_root="../../"><head><meta charset="utf-8">
+<!DOCTYPE html><html class="no-js" lang="en"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html">
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.2 and Furo 2023.07.26 -->
         <title>api.fs - Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -474,7 +474,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">is_dir</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">"""Returns whether a :class:`~File` is a directory.</span>
+<span class="w">        </span><span class="sd">"""Returns whether a ``File`` is a directory.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            bool: True if a directory, False otherwise.</span>
@@ -483,7 +483,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">exists</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">"""Returns whether a :class:`~File` path exists on the dev env filesystem.</span>
+<span class="w">        </span><span class="sd">"""Returns whether a ``File`` path exists on the dev env filesystem.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            bool: True if the file exists, False otherwise.</span>
@@ -493,10 +493,10 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <div class="viewcode-block" id="File.read_text">
 <a class="viewcode-back" href="../../index.html#api.fs.File.read_text">[docs]</a>
     <span class="k">def</span> <span class="nf">read_text</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">"""Reads the contents of the :class:`~File` as an utf-8 encoded string.</span>
+<span class="w">        </span><span class="sd">"""Reads the contents of the ``File`` as an utf-8 encoded string.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            str: The contents of the :class:`~File` as an utf-8 encoded string.</span>
+<span class="sd">            str: The contents of the ``File`` as an utf-8 encoded string.</span>
 
 <span class="sd">        Examples:</span>
 
@@ -521,10 +521,10 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <div class="viewcode-block" id="File.list_dir">
 <a class="viewcode-back" href="../../index.html#api.fs.File.list_dir">[docs]</a>
     <span class="k">def</span> <span class="nf">list_dir</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"list[File]"</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">"""Returns a list of :class:`~File` under the current directory, raises an error if not a directory.</span>
+<span class="w">        </span><span class="sd">"""Returns a list of ``File`` under the current directory, raises an error if not a directory.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            list[File]: list of :class:`~File` object representing the files under the provided directory.</span>
+<span class="sd">            list[File]: list of ``File`` object representing the files under the provided directory.</span>
 
 <span class="sd">        Examples:</span>
 

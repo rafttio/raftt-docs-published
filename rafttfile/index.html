@@ -1,9 +1,9 @@
-<!DOCTYPE html><html class="no-js" lang="en" data-content_root="./"><head><meta charset="utf-8">
+<!DOCTYPE html><html class="no-js" lang="en"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/">
 <link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html">
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.2 and Furo 2023.07.26 -->
         <title>Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -479,7 +479,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.configmaps">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configmaps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ConfigMap</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.configmaps" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes ConfigMaps in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes ConfigMaps in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the ConfigMap name to the K8s resource itself</p>
@@ -493,7 +493,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.crds">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">crds</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.CommonK8sResource" title="api.CommonK8sResource"><span class="pre">CommonK8sResource</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.crds" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes CRDs in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes CRDs in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the CRD name to the K8s resource itself</p>
@@ -507,7 +507,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.deployments">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deployments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment"><span class="pre">Deployment</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.deployments" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Deployments in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes Deployments in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the Deployment name to the K8s resource itself</p>
@@ -521,7 +521,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.ingresses">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ingresses</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Ingress</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.ingresses" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Ingresses in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes Ingresses in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the Ingress name to the K8s resource itself</p>
@@ -535,7 +535,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.namedvolumes">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">namedvolumes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume"><span class="pre">Volume</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.namedvolumes" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes NamedVolumes in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes NamedVolumes in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the NamedVolume name to the K8s resource itself</p>
@@ -549,7 +549,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.pods">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pods</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod"><span class="pre">Pod</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.pods" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Pods in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes Pods in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the Pod name to the K8s resource itself</p>
@@ -563,7 +563,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.rolebindings">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rolebindings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">RoleBinding</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.rolebindings" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes RoleBindings in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes RoleBindings in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the RoleBinding name to the K8s resource itself</p>
@@ -577,7 +577,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.roles">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">roles</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Role</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.roles" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Roles in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes Roles in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the Role name to the K8s resource itself</p>
@@ -591,7 +591,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.secrets">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">secrets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Secret</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.secrets" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Secrets in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes Secrets in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the Secret name to the K8s resource itself</p>
@@ -605,7 +605,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.serviceaccounts">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serviceaccounts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ServiceAccount</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.serviceaccounts" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes ServiceAccounts in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes ServiceAccounts in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the ServiceAccount name to the K8s resource itself</p>
@@ -619,7 +619,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.services">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">services</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Service</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.services" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Services in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes Services in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the Service name to the K8s resource itself</p>
@@ -633,7 +633,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <dl class="py property">
 <dt class="sig sig-object py" id="api.Resources.statefulsets">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">statefulsets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet"><span class="pre">StatefulSet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.statefulsets" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes StatefulSets in the <a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> object.</p>
+<dd><p>A dict of Kubernetes StatefulSets in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A dict that maps the StatefulSet name to the K8s resource itself</p>
@@ -656,8 +656,8 @@ the workload’s image.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The ID to be used when referring to the image, e.g. in other Dockerfiles</p></li>
-<li><p><strong>context</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – The context for building the Dockerfile.</p></li>
-<li><p><strong>dockerfile</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>, optional) – The path of the Dockerfile. Equivalent to –file when using <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code>. Defaults to “&lt;context&gt;/Dockerfile”.</p></li>
+<li><p><strong>context</strong> (str | <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – The context for building the Dockerfile.</p></li>
+<li><p><strong>dockerfile</strong> (str | <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>, optional) – The path of the Dockerfile. Equivalent to –file when using <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code>. Defaults to “&lt;context&gt;/Dockerfile”.</p></li>
 <li><p><strong>args</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em><em>, </em><em>optional</em>) – the arguments passed to Dockerfile. Equivalent to –build-arg when using <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code>. Defaults to {}.</p></li>
 <li><p><strong>target</strong> (<em>str</em><em>, </em><em>optional</em>) – Set the target build stage to build. Equivalent to –target when using <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code>. Defaults to “”.</p></li>
 <li><p><strong>prebuild</strong> (<em>str</em><em> | </em><em>Iterable</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – A command to run in the dev container before the image is built. It is passed as a string or an iterable of strings. Defaults to “”.</p></li>
@@ -689,7 +689,7 @@ This repo and its files can than be accessed in the <code class="docutils litera
 <dd class="field-even"><p>A handle to the working tree.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -740,7 +740,7 @@ This is useful to prevent GitOps tools from reverting the changes made by Raftt 
 <dd><p>Mark the resources to be deployed when the <code class="docutils literal notranslate"><span class="pre">.raftt</span></code> file interpretation is completed after <code class="docutils literal notranslate"><span class="pre">up</span></code>, <code class="docutils literal notranslate"><span class="pre">rebuild</span></code>, and <code class="docutils literal notranslate"><span class="pre">dev</span></code> commands.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>resources</strong> (<a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a> | <code class="xref py py-class docutils literal notranslate"><span class="pre">Pod</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">Deployment</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">StatefulSet</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">Ingress</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">Service</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">Secret</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">ServiceAccount</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">Role</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">RoleBinding</span></code> | <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigMap</span></code>) – The K8s objects to be deployed.
+<dd class="field-odd"><p><strong>resources</strong> (<code class="docutils literal notranslate"><span class="pre">Resources</span></code> | <code class="docutils literal notranslate"><span class="pre">Pod</span></code> | <code class="docutils literal notranslate"><span class="pre">Deployment</span></code> | <code class="docutils literal notranslate"><span class="pre">StatefulSet</span></code> | <code class="docutils literal notranslate"><span class="pre">Ingress</span></code> | <code class="docutils literal notranslate"><span class="pre">Service</span></code> | <code class="docutils literal notranslate"><span class="pre">Secret</span></code> | <code class="docutils literal notranslate"><span class="pre">ServiceAccount</span></code> | <code class="docutils literal notranslate"><span class="pre">Role</span></code> | <code class="docutils literal notranslate"><span class="pre">RoleBinding</span></code> | <code class="docutils literal notranslate"><span class="pre">ConfigMap</span></code>) – The K8s objects to be deployed.
 Can be iterable or single instance of the Resources type or a resource of any supported type.</p>
 </dd>
 </dl>
@@ -753,7 +753,7 @@ Can be iterable or single instance of the Resources type or a resource of any su
 Resources that are marked to be deployed using this function don’t need to be deployed using the <code class="docutils literal notranslate"><span class="pre">deploy</span></code> function.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>resources</strong> (<a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object containing the workload defining the dev container.</p>
+<dd class="field-odd"><p><strong>resources</strong> (<code class="docutils literal notranslate"><span class="pre">Resources</span></code>) – The <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object containing the workload defining the dev container.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -766,7 +766,7 @@ Resources that are marked to be deployed using this function don’t need to be 
 <p>Only relevant for Raftt in connect-mode.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>resources</strong> (<a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a>) – The resources to-be-deployed</p>
+<dd class="field-odd"><p><strong>resources</strong> (<code class="docutils literal notranslate"><span class="pre">Resources</span></code>) – The resources to-be-deployed</p>
 </dd>
 </dl>
 </dd></dl>
@@ -785,7 +785,7 @@ using the <code class="docutils literal notranslate"><span class="pre">clone_rep
 <dd class="field-even"><p>A handle to the working tree.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -838,17 +838,17 @@ Object kinds that aren’t supported are ignored.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Helm release name.</p></li>
-<li><p><strong>path</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – Path to chart. Relative to repo root, or from a different repository.</p></li>
+<li><p><strong>path</strong> (str | <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – Path to chart. Relative to repo root, or from a different repository.</p></li>
 <li><p><strong>values</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em><em>, </em><em>optional</em>) – a dictionary of values to be passed to Helm. Will override values defined in the files. Defaults to {}.</p></li>
 <li><p><strong>version</strong> (<em>str</em><em>, </em><em>optional</em>) – the version of Helm to use, currently, 3.10.1, 3.8.2 and 2.13.0 are supported. Defaults to “3.10.1”.</p></li>
-<li><p><strong>values_files</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code> | Iterable[str  |  <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>], optional) – Paths to files in the repo, or URLs. Same as when using <code class="docutils literal notranslate"><span class="pre">helm</span> <span class="pre">template</span></code>, when passing multiple values files, the last one will override the previous files. Defaults to [].</p></li>
+<li><p><strong>values_files</strong> (str | <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code> | Iterable[str  |  <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>], optional) – Paths to files in the repo, or URLs. Same as when using <code class="docutils literal notranslate"><span class="pre">helm</span> <span class="pre">template</span></code>, when passing multiple values files, the last one will override the previous files. Defaults to [].</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object containing all the loaded K8s resources</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Resources</span></code></p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
@@ -872,13 +872,13 @@ Can receive of a single YAML manifest or a directory of manifests.
 Object kinds that aren’t supported are ignored.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>path</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – path to the manifests file</p>
+<dd class="field-odd"><p><strong>path</strong> (str | <code class="docutils literal notranslate"><span class="pre">repoworkingtree.RepoWorkingTree</span></code>) – path to the manifests file</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object containing all the loaded K8s resources.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Resources</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -891,7 +891,7 @@ Object kinds that aren’t supported are ignored.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>dir</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – The path of the dir containing the Kustomization file(s)</p></li>
+<li><p><strong>dir</strong> (str | <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – The path of the dir containing the Kustomization file(s)</p></li>
 <li><p><strong>helm_version</strong> (<em>str</em><em>, </em><em>optional</em>) – the version of Helm to use, currently, 3.10.1, 3.8.2 and 2.13.0 are supported. Defaults to “3.10.1”.</p></li>
 </ul>
 </dd>
@@ -899,7 +899,7 @@ Object kinds that aren’t supported are ignored.</p>
 <dd class="field-even"><p>A <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object containing all the loaded K8s resources</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Resources</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -911,8 +911,8 @@ Object kinds that aren’t supported are ignored.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>path</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – Path of the docker-compose file</p></li>
-<li><p><strong>workdir</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>, optional) – Specify an alternate working directory. Defaults to the directory containing the docker-compose file.</p></li>
+<li><p><strong>path</strong> (str | <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – Path of the docker-compose file</p></li>
+<li><p><strong>workdir</strong> (str | <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>, optional) – Specify an alternate working directory. Defaults to the directory containing the docker-compose file.</p></li>
 <li><p><strong>profiles</strong> (<em>str</em><em> | </em><em>Iterable</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Specify a profile to enable. Defaults to [].</p></li>
 <li><p><strong>skip_consistency_check</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not to perform a consistency check on the docker-compose file. Defaults to False.</p></li>
 <li><p><strong>env</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Environment variables to add or override when evaluating the docker compose file. Defaults to {}.</p></li>
@@ -922,7 +922,7 @@ Object kinds that aren’t supported are ignored.</p>
 <dd class="field-even"><p>A <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object containing all the loaded K8s resources.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">Resources</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -937,16 +937,16 @@ This also allows the volume to be saved and loaded using <code class="docutils l
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>workload</strong> (<a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code></a>) – The workload running the seeded MongoDB instance.</p></li>
-<li><p><strong>dump_file_path</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – The path of the dump file to be loaded.</p></li>
+<li><p><strong>workload</strong> (<code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code>) – The workload running the seeded MongoDB instance.</p></li>
+<li><p><strong>dump_file_path</strong> (str | <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – The path of the dump file to be loaded.</p></li>
 <li><p><strong>key_provider</strong> (<em>str</em><em>, </em><em>optional</em>) – A script that creates a cache of the created seed. Used to cache seeding script outputs and reduce seeding time. Defaults to “”.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A volume initializer object can be assigned as an <a class="reference internal" href="#api.volumes.Volume.initializer" title="api.volumes.Volume.initializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">initializer</span></code></a> of a <a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code></a> object.</p>
+<dd class="field-even"><p>A volume initializer object can be assigned as an <code class="docutils literal notranslate"><span class="pre">volumes.Volume.initializer</span></code> of a <code class="docutils literal notranslate"><span class="pre">volumes.Volume</span></code> object.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.volumes.VolumeInitializer" title="api.volumes.VolumeInitializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeInitializer</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">volumes.VolumeInitializer</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -975,7 +975,7 @@ Object kinds that aren’t supported are ignored.</p>
 <dd class="field-odd"><p>A <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object containing all the loaded K8s resources</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a></p>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">Resources</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1040,18 +1040,18 @@ Only relevant for orchestration mode.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="api.pod_volume">
 <span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">pod_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_source:</span> <span class="pre">k8s.EmptyDirVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.PersistentVolumeClaimVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.AWSElasticBlockStoreVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.AzureDiskVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.AzureFileVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.CSIVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.CephFSVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.CinderVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.ConfigMapVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.DownwardAPIVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.EphemeralVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.FCVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.FlexVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.FlockerVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.GCEPersistentDiskVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.GitRepoVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.GlusterfsVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.HostPathVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.ISCSIVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.NFSVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.PhotonPersistentDiskVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.PortworxVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.ProjectedVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.QuobyteVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.RBDVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.ScaleIOVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.SecretVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.StorageOSVolumeSource</span> <span class="pre">|</span> <span class="pre">k8s.VsphereVirtualDiskVolumeSource</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;api.k8s.EmptyDirVolumeSource</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#pod_volume"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.pod_volume" title="Link to this definition">#</a></dt>
-<dd><p>Creates a volume that can be mounted to a single <a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code></a>, and can’t be shared between different pods.
-This is requiered when the env is deployed across multiple nodes.</p>
+<dd><p>Creates a volume that can be mounted to a single <code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code>, and can’t be shared between different pods.
+This is required when the env is deployed across multiple nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>volume_source</strong> (<em>VolumeSource</em>) – The underlying Kubernetes volume source &lt;<a class="reference external" href="https://kubernetes.io/docs/concepts/storage/volumes/#volume-types">https://kubernetes.io/docs/concepts/storage/volumes/#volume-types</a>&gt;_ to be used for the volume.
+<dd class="field-odd"><p><strong>volume_source</strong> (<em>VolumeSource</em>) – The underlying Kubernetes <a class="reference external" href="https://kubernetes.io/docs/concepts/storage/volumes/#volume-types">volume source</a> to be used for the volume.
 Defaults to EmptyDirVolumeSource().</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The Volume object that can be mounted into workloads.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.volumes.PodVolume" title="api.volumes.PodVolume"><code class="xref py py-class docutils literal notranslate"><span class="pre">PodVolume</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">volumes.PodVolume</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1066,17 +1066,17 @@ This also allows the volume to be saved and loaded using <code class="docutils l
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>workload</strong> (<a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code></a>) – The workload running the seeded postgres instance.</p></li>
-<li><p><strong>dump_file_path</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – The path of the dump file to be loaded.</p></li>
+<li><p><strong>workload</strong> (<code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code>) – The workload running the seeded postgres instance.</p></li>
+<li><p><strong>dump_file_path</strong> (str | <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – The path of the dump file to be loaded.</p></li>
 <li><p><strong>user</strong> (<em>str</em>) – The user to be used to connect to the DB</p></li>
 <li><p><strong>key_provider</strong> (<em>str</em><em>, </em><em>optional</em>) – A script that creates a cache of the created seed. Used to cache seeding script outputs and reduce seeding time. Defaults to “”.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A volume initializer object can be assigned as an <a class="reference internal" href="#api.volumes.Volume.initializer" title="api.volumes.Volume.initializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">initializer</span></code></a> of a <a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code></a> object.</p>
+<dd class="field-even"><p>A volume initializer object can be assigned as an <code class="docutils literal notranslate"><span class="pre">volumes.Volume.initializer</span></code> of a <code class="docutils literal notranslate"><span class="pre">volumes.Volume</span></code> object.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.volumes.VolumeInitializer" title="api.volumes.VolumeInitializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeInitializer</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">volumes.VolumeInitializer</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1089,8 +1089,8 @@ The actions are executed sequentially.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>on</strong> (<a class="reference internal" href="#api.events.Event" title="api.events.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a> | Iterable[<a class="reference internal" href="#api.events.Event" title="api.events.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a>]) – List of events that trigger the actions</p></li>
-<li><p><strong>do</strong> (<a class="reference internal" href="#api.actions.Action" title="api.actions.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Action</span></code></a> | <code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<a class="reference internal" href="#api.actions.Action" title="api.actions.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Action</span></code></a>]) – (<a class="reference internal" href="#api.actions.Action" title="api.actions.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Action</span></code></a> | Iterable[<a class="reference internal" href="#api.actions.Action" title="api.actions.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Action</span></code></a>]): List of actions to be triggered</p></li>
+<li><p><strong>on</strong> (<code class="docutils literal notranslate"><span class="pre">events.Event</span></code> | Iterable[<code class="docutils literal notranslate"><span class="pre">events.Event</span></code>]) – List of events that trigger the actions</p></li>
+<li><p><strong>do</strong> (<a class="reference internal" href="#api.actions.Action" title="api.actions.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Action</span></code></a> | <code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<a class="reference internal" href="#api.actions.Action" title="api.actions.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Action</span></code></a>]) – (<code class="docutils literal notranslate"><span class="pre">actions.Action</span></code> | Iterable[<code class="docutils literal notranslate"><span class="pre">actions.Action</span></code>]): List of actions to be triggered</p></li>
 </ul>
 </dd>
 </dl>
@@ -1101,17 +1101,17 @@ The actions are executed sequentially.</p>
 <span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">repo_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo_working_tree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">repoworkingtree.RepoWorkingTree</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#repo_volume"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.repo_volume" title="Link to this definition">#</a></dt>
 <dd><p>Returns a handle to the volume that contains a working tree of a repo.
 Can be either the “current” rep - the one of this <code class="docutils literal notranslate"><span class="pre">.raftt</span></code> file, or another repo,
-if a different <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code> object is provided.
+if a different <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code> object is provided.
 Can be used to mount the code into application containers and/or builder containers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>repo_working_tree</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>, optional) – The repo working tree that will be in the created volume. Defaults to None, which means the repo is the repo of the current <code class="docutils literal notranslate"><span class="pre">.raftt</span></code>.</p>
+<dd class="field-odd"><p><strong>repo_working_tree</strong> (<code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>, optional) – The repo working tree that will be in the created volume. Defaults to None, which means the repo is the repo of the current <code class="docutils literal notranslate"><span class="pre">.raftt</span></code>.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The RepoVolume object that can contains the repo and can be mounted into workloads.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.volumes.RepoVolume" title="api.volumes.RepoVolume"><code class="xref py py-class docutils literal notranslate"><span class="pre">RepoVolume</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">volumes.RepoVolume</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1119,21 +1119,21 @@ Can be used to mount the code into application containers and/or builder contain
 <dl class="py function">
 <dt class="sig sig-object py" id="api.script_volume_initializer">
 <span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">script_volume_initializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><span class="pre">workload.Workload</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">script</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_provider</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#script_volume_initializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.script_volume_initializer" title="Link to this definition">#</a></dt>
-<dd><p>Create a <a class="reference internal" href="#api.volumes.VolumeInitializer" title="api.volumes.VolumeInitializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeInitializer</span></code></a> object that is initilized by a custom script.
-The returned object can be assigned as an <a class="reference internal" href="#api.volumes.Volume.initializer" title="api.volumes.Volume.initializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">initializer</span></code></a> of a <a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code></a> object.</p>
+<dd><p>Create a <code class="docutils literal notranslate"><span class="pre">volumes.VolumeInitializer</span></code> object that is initilized by a custom script.
+The returned object can be assigned as an <code class="docutils literal notranslate"><span class="pre">volumes.Volume.initializer</span></code> of a <code class="docutils literal notranslate"><span class="pre">volumes.Volume</span></code> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>workload</strong> (<a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code></a>) – The workload that Raftt will enforce to be up when the script is running. This is done to guarantee that the seeded app (e.g. a DB) is running during the scrip execution.</p></li>
+<li><p><strong>workload</strong> (<code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code>) – The workload that Raftt will enforce to be up when the script is running. This is done to guarantee that the seeded app (e.g. a DB) is running during the scrip execution.</p></li>
 <li><p><strong>script</strong> (<em>str</em>) – The path of the script in the workload</p></li>
 <li><p><strong>key_provider</strong> (<em>str</em><em>, </em><em>optional</em>) – A script that creates a cache of the created seed. Used to cache seeding script outputs and reduce seeding time. Defaults to “”.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A volume initializer object can be assigned as an <a class="reference internal" href="#api.volumes.Volume.initializer" title="api.volumes.Volume.initializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">initializer</span></code></a> of a <a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code></a> object.</p>
+<dd class="field-even"><p>A volume initializer object can be assigned as an <code class="docutils literal notranslate"><span class="pre">volumes.Volume.initializer</span></code> of a <code class="docutils literal notranslate"><span class="pre">volumes.Volume</span></code> object.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.volumes.VolumeInitializer" title="api.volumes.VolumeInitializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">VolumeInitializer</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">volumes.VolumeInitializer</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1150,7 +1150,7 @@ The returned object can be assigned as an <a class="reference internal" href="#a
 <dd class="field-even"><p>The SecretVolume object that can be mounted into workloads.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.volumes.SecretVolume" title="api.volumes.SecretVolume"><code class="xref py py-class docutils literal notranslate"><span class="pre">SecretVolume</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">volumes.SecretVolume</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1171,12 +1171,12 @@ Leaving this as True (default) scales down the original workload to 0, rescaling
 <dl class="py function">
 <dt class="sig sig-object py" id="api.setup_container">
 <span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">setup_container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.Resources" title="api.Resources"><span class="pre">Resources</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#setup_container"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.setup_container" title="Link to this definition">#</a></dt>
-<dd><p>Define the <a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code></a> to be used for the execution of lifecycle hooks.</p>
+<dd><p>Define the <code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code> to be used for the execution of lifecycle hooks.</p>
 <p>This function can’t be used in the env definition file, only in the file that configure as the <cite>envLifecycleHooks</cite> attribute in <cite>raftt.yml</cite>.
 Only relevant for orchestration mode.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>resources</strong> (<a class="reference internal" href="#api.Resources" title="api.Resources"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resources</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object containing the workload to be used. Must contain a single <a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code></a>.</p>
+<dd class="field-odd"><p><strong>resources</strong> (<code class="docutils literal notranslate"><span class="pre">Resources</span></code>) – The <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object containing the workload to be used. Must contain a single <code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1184,7 +1184,7 @@ Only relevant for orchestration mode.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="api.volume">
 <span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#volume"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.volume" title="Link to this definition">#</a></dt>
-<dd><p>Creates a volume that can be mounted to one or more <a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code></a>.</p>
+<dd><p>Creates a volume that can be mounted to one or more <code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the created volume.</p>
@@ -1193,7 +1193,7 @@ Only relevant for orchestration mode.</p>
 <dd class="field-even"><p>The Volume object that can be mounted into workloads.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code></a></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">volumes.Volume</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1247,7 +1247,7 @@ This information is sent from the client to the env every time the <code class="
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>dependency</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code>) – The workload this workload depends on.</p></li>
+<li><p><strong>dependency</strong> (<code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code>) – The workload this workload depends on.</p></li>
 <li><p><strong>condition</strong> (<em>str</em><em>, </em><em>optional</em>) – The condition to wait on. Defaults to ‘service_started’.
 possible values:
 - service_started
@@ -1333,7 +1333,7 @@ This allows running different Raftt commands in the workload.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="api.workload.Workload.name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#api.workload.Workload.name" title="Link to this definition">#</a></dt>
-<dd><p>Return the name of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code> object.</p>
+<dd><p>Return the name of the <code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code> object.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1356,7 +1356,7 @@ See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#r
 <span class="sig-name descname"><span class="pre">set_default_container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">container_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/workload.html#Workload.set_default_container"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.workload.Workload.set_default_container" title="Link to this definition">#</a></dt>
 <dd><p>Sets the default container for this workload.
 This container will be used as default when using CLI commands and <code class="docutils literal notranslate"><span class="pre">.raftt</span></code> functions without specifying a container.
-If no container is marked using this function or the by &lt;ENTER_DETAILS&gt;, the first container of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code> object is selected as default.</p>
+If no container is marked using this function or the by &lt;ENTER_DETAILS&gt;, the first container of the <code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code> object is selected as default.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>container_name</strong> (<em>str</em>) – The name of the container to mark as the default container.</p>
@@ -1385,7 +1385,7 @@ If no container is marked using this function or the by &lt;ENTER_DETAILS&gt;, t
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>src</strong> (str | <code class="xref py py-class docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – Source to sync, if a string assumed relative to the main repository.</p></li>
+<li><p><strong>src</strong> (str | <code class="docutils literal notranslate"><span class="pre">RepoWorkingTree</span></code>) – Source to sync, if a string assumed relative to the main repository.</p></li>
 <li><p><strong>dst</strong> (<em>str</em>) – Destination on the container, if not absolute assumed relative to workdir.</p></li>
 <li><p><strong>ignore</strong> (<em>Iterable</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – glob patterns to ignore when syncing. Defaults to [].</p></li>
 <li><p><strong>container</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the container to sync to, if empty the default container is selected. Defaults to “”.</p></li>
@@ -1399,7 +1399,7 @@ If no container is marked using this function or the by &lt;ENTER_DETAILS&gt;, t
 <dl class="py class" id="module-api.volumes">
 <dt class="sig sig-object py" id="api.volumes.PodVolume">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volumes.</span></span><span class="sig-name descname"><span class="pre">PodVolume</span></span><a class="reference internal" href="_modules/api/volumes.html#PodVolume"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.volumes.PodVolume" title="Link to this definition">#</a></dt>
-<dd><p>Type which represents a volume that can be mounted to a single <code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code> object using Workload.mount().</p>
+<dd><p>Type which represents a volume that can be mounted to a single <code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code> object using Workload.mount().</p>
 </dd></dl>
 
 <dl class="py class">
@@ -1419,7 +1419,7 @@ can be mounted using Workload.mount()</p>
 <dd class="field-even"><p>A handle to a volume that’s a subdirectory of the RepoVolume.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RepoVolume</span></code></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">volumes.RepoVolume</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1435,7 +1435,7 @@ can be mounted using Workload.mount()</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="api.volumes.Volume">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volumes.</span></span><span class="sig-name descname"><span class="pre">Volume</span></span><a class="reference internal" href="_modules/api/volumes.html#Volume"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.volumes.Volume" title="Link to this definition">#</a></dt>
-<dd><p>Type which represents a volume that can be mounted into on or more <code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code> objects using Workload.mount().</p>
+<dd><p>Type which represents a volume that can be mounted into on or more <code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code> objects using Workload.mount().</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="api.volumes.Volume.initializer">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initializer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#api.volumes.VolumeInitializer" title="api.volumes.VolumeInitializer"><span class="pre">VolumeInitializer</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#api.volumes.Volume.initializer" title="Link to this definition">#</a></dt>
@@ -1453,7 +1453,7 @@ can be mounted using Workload.mount()</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="api.volumes.Volume.name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#api.volumes.Volume.name" title="Link to this definition">#</a></dt>
-<dd><p>Return the name of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code> object.</p>
+<dd><p>Return the name of the <code class="docutils literal notranslate"><span class="pre">volumes.Volume</span></code> object.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1474,7 +1474,7 @@ can be mounted using Workload.mount()</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="api.actions.CMD">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">actions.</span></span><span class="sig-name descname"><span class="pre">CMD</span></span><a class="reference internal" href="_modules/api/actions.html#CMD"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.actions.CMD" title="Link to this definition">#</a></dt>
-<dd><p>Represents a <a class="reference internal" href="#api.actions.Action" title="api.actions.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Action</span></code></a> type that receives a command to execute as a string or an iterable of strings and a workload to execute the command on.</p>
+<dd><p>Represents a <code class="docutils literal notranslate"><span class="pre">actions.Action</span></code> type that receives a command to execute as a string or an iterable of strings and a workload to execute the command on.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="api.actions.CMD.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><span class="pre">workload.Workload</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">collections.abc.Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/actions.html#CMD.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.actions.CMD.__init__" title="Link to this definition">#</a></dt>
@@ -1482,7 +1482,7 @@ can be mounted using Workload.mount()</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>workload</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code>) – Workload instance to run the action on.</p></li>
+<li><p><strong>workload</strong> (<code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code>) – Workload instance to run the action on.</p></li>
 <li><p><strong>cmd</strong> (<em>str</em><em> | </em><em>Iterable</em><em>[</em><em>str</em><em>]</em>) – String or iterable of strings to be executed as a command on the specified workload.</p></li>
 <li><p><strong>container</strong> (<em>str</em><em>, </em><em>optional</em>) – name of the container to run the action on. Defaults to “”, which means the container is the workload’s default container.</p></li>
 </ul>
@@ -1510,7 +1510,7 @@ This event is used to trigger actions using Raftt’s hooks mechanism.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>workload</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code>) – Workload instance for which the hook is triggered.</p></li>
+<li><p><strong>workload</strong> (<code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code>) – Workload instance for which the hook is triggered.</p></li>
 <li><p><strong>container</strong> (<em>str</em>) – Name of the container for which the hook is triggered. Defaults to “”, which means the container is the workload’s default container.</p></li>
 <li><p><strong>block_main_process</strong> (<em>bool</em>) – Whether or not to wait for the hook to finish before starting the main process. Defaults to True.</p></li>
 <li><p><strong>start_if_failed</strong> (<em>bool</em>) – Whether or not to start the main process if the hook actions fail. Only relevant if block_main_process is True. Defaults to False.</p></li>
@@ -1524,17 +1524,17 @@ This event is used to trigger actions using Raftt’s hooks mechanism.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="api.events.OnFileChanged">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">events.</span></span><span class="sig-name descname"><span class="pre">OnFileChanged</span></span><a class="reference internal" href="_modules/api/events.html#OnFileChanged"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.events.OnFileChanged" title="Link to this definition">#</a></dt>
-<dd><p>Represents an <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code> which triggers on a file being changed on a workload.</p>
+<dd><p>Represents an <code class="docutils literal notranslate"><span class="pre">events.Event</span></code> which triggers on a file being changed on a workload.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="api.events.OnFileChanged.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.workload.Workload" title="api.workload.Workload"><span class="pre">workload.Workload</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">patterns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">collections.abc.Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/events.html#OnFileChanged.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.events.OnFileChanged.__init__" title="Link to this definition">#</a></dt>
-<dd><p>Create a new <code class="xref py py-class docutils literal notranslate"><span class="pre">OnFileChanged</span></code> event.
+<dd><p>Create a new <code class="docutils literal notranslate"><span class="pre">events.OnFileChanged</span></code> event.
 This event is used to trigger actions using Raftt’s file watching mechanism.
 See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#file-watching">here</a> for more information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>workload</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Workload</span></code>) – Workload instance to watch for file changes on.</p></li>
+<li><p><strong>workload</strong> (<code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code>) – Workload instance to watch for file changes on.</p></li>
 <li><p><strong>patterns</strong> (<em>str</em><em> | </em><em>Iterable</em><em>[</em><em>str</em><em>]</em>) – String or iterable of strings of glob patterns describing the files being watched.</p></li>
 <li><p><strong>container</strong> (<em>str</em>) – Name of the container for which the hook is triggered. Defaults to “”, which means the container is the workload’s default container.</p></li>
 </ul>
@@ -1572,7 +1572,7 @@ See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#f
 <dl class="py property">
 <dt class="sig sig-object py" id="api.fs.File.exists">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exists</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#api.fs.File.exists" title="Link to this definition">#</a></dt>
-<dd><p>Returns whether a <a class="reference internal" href="#api.fs.File" title="api.fs.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a> path exists on the dev env filesystem.</p>
+<dd><p>Returns whether a <code class="docutils literal notranslate"><span class="pre">File</span></code> path exists on the dev env filesystem.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if the file exists, False otherwise.</p>
@@ -1586,7 +1586,7 @@ See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#f
 <dl class="py property">
 <dt class="sig sig-object py" id="api.fs.File.is_dir">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#api.fs.File.is_dir" title="Link to this definition">#</a></dt>
-<dd><p>Returns whether a <a class="reference internal" href="#api.fs.File" title="api.fs.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a> is a directory.</p>
+<dd><p>Returns whether a <code class="docutils literal notranslate"><span class="pre">File</span></code> is a directory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if a directory, False otherwise.</p>
@@ -1600,10 +1600,10 @@ See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#f
 <dl class="py method">
 <dt class="sig sig-object py" id="api.fs.File.list_dir">
 <span class="sig-name descname"><span class="pre">list_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/fs.html#File.list_dir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.fs.File.list_dir" title="Link to this definition">#</a></dt>
-<dd><p>Returns a list of <a class="reference internal" href="#api.fs.File" title="api.fs.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a> under the current directory, raises an error if not a directory.</p>
+<dd><p>Returns a list of <code class="docutils literal notranslate"><span class="pre">File</span></code> under the current directory, raises an error if not a directory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list of <a class="reference internal" href="#api.fs.File" title="api.fs.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a> object representing the files under the provided directory.</p>
+<dd class="field-odd"><p>list of <code class="docutils literal notranslate"><span class="pre">File</span></code> object representing the files under the provided directory.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>list[<a class="reference internal" href="#api.fs.File" title="api.fs.File">File</a>]</p>
@@ -1643,10 +1643,10 @@ See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#f
 <dl class="py method">
 <dt class="sig sig-object py" id="api.fs.File.read_text">
 <span class="sig-name descname"><span class="pre">read_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/fs.html#File.read_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.fs.File.read_text" title="Link to this definition">#</a></dt>
-<dd><p>Reads the contents of the <a class="reference internal" href="#api.fs.File" title="api.fs.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a> as an utf-8 encoded string.</p>
+<dd><p>Reads the contents of the <code class="docutils literal notranslate"><span class="pre">File</span></code> as an utf-8 encoded string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The contents of the <a class="reference internal" href="#api.fs.File" title="api.fs.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></a> as an utf-8 encoded string.</p>
+<dd class="field-odd"><p>The contents of the <code class="docutils literal notranslate"><span class="pre">File</span></code> as an utf-8 encoded string.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>str</p>
@@ -1672,9 +1672,9 @@ See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#f
 </dd></dl>
 
 </section>
-<section id="module-api.json">
-<span id="string-encoding"></span><h1>String encoding<a class="headerlink" href="#module-api.json" title="Link to this heading">#</a></h1>
-<p>json provides functions for working with json data</p>
+<section id="string-encoding">
+<h1>String encoding<a class="headerlink" href="#string-encoding" title="Link to this heading">#</a></h1>
+<p id="module-api.json">json provides functions for working with json data</p>
 <p>Import as:</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s2">"encoding/json.star"</span><span class="p">,</span> <span class="s2">"json"</span><span class="p">)</span>
@@ -1981,7 +1981,7 @@ Decoding fails if src is not a valid YAML string.</p>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-api.json">String encoding</a><ul>
+<li><a class="reference internal" href="#string-encoding">String encoding</a><ul>
 <li><a class="reference internal" href="#api.json.decode"><code class="docutils literal notranslate"><span class="pre">decode()</span></code></a></li>
 <li><a class="reference internal" href="#api.json.encode"><code class="docutils literal notranslate"><span class="pre">encode()</span></code></a></li>
 <li><a class="reference internal" href="#api.json.indent"><code class="docutils literal notranslate"><span class="pre">indent()</span></code></a></li>

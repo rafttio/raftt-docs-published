@@ -1,8 +1,8 @@
-<!DOCTYPE html><html class="no-js" lang="en" data-content_root="../"><head><meta charset="utf-8">
+<!DOCTYPE html><html class="no-js" lang="en"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html">
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.2 and Furo 2023.07.26 -->
         <title>api - Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -521,7 +521,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">deployments</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Deployment</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes Deployments in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Deployments in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, Deployment]: A dict that maps the Deployment name to the K8s resource itself</span>
@@ -530,7 +530,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">pods</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Pod</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes Pods in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Pods in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, Pod]: A dict that maps the Pod name to the K8s resource itself</span>
@@ -539,7 +539,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">statefulsets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">StatefulSet</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes StatefulSets in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes StatefulSets in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, StatefulSet]: A dict that maps the StatefulSet name to the K8s resource itself</span>
@@ -548,7 +548,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">services</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Service</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes Services in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Services in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, Service]: A dict that maps the Service name to the K8s resource itself</span>
@@ -557,7 +557,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">ingresses</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Ingress</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes Ingresses in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Ingresses in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, Ingress]: A dict that maps the Ingress name to the K8s resource itself</span>
@@ -566,7 +566,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">secrets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Secret</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes Secrets in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Secrets in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, Secret]: A dict that maps the Secret name to the K8s resource itself</span>
@@ -575,7 +575,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">configmaps</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ConfigMap</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes ConfigMaps in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes ConfigMaps in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, ConfigMap]: A dict that maps the ConfigMap name to the K8s resource itself</span>
@@ -584,7 +584,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">namedvolumes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Volume</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes NamedVolumes in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes NamedVolumes in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, Volume]: A dict that maps the NamedVolume name to the K8s resource itself</span>
@@ -593,7 +593,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">roles</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Role</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes Roles in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Roles in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, Role]: A dict that maps the Role name to the K8s resource itself</span>
@@ -602,7 +602,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">rolebindings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">RoleBinding</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes RoleBindings in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes RoleBindings in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, RoleBinding]: A dict that maps the RoleBinding name to the K8s resource itself</span>
@@ -611,7 +611,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">serviceaccounts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ServiceAccount</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes ServiceAccounts in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes ServiceAccounts in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, ServiceAccount]: A dict that maps the ServiceAccount name to the K8s resource itself</span>
@@ -620,7 +620,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">crds</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="s2">"CommonK8sResource"</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">"""A dict of Kubernetes CRDs in the :class:`~Resources` object.</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes CRDs in the ``Resources`` object.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, CommonK8sResource]: A dict that maps the CRD name to the K8s resource itself</span>
@@ -660,7 +660,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="w">    </span><span class="sd">"""Mark the resources to be deployed when the ``.raftt`` file interpretation is completed after ``up``, ``rebuild``, and ``dev`` commands.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        resources (:class:`~Resources` | :class:`~Pod` | :class:`~Deployment` | :class:`~StatefulSet` | :class:`~Ingress` | :class:`~Service` | :class:`~Secret` | :class:`~ServiceAccount` | :class:`~Role` | :class:`~RoleBinding` | :class:`~ConfigMap`):</span>
+<span class="sd">        resources (``Resources`` | ``Pod`` | ``Deployment`` | ``StatefulSet`` | ``Ingress`` | ``Service`` | ``Secret`` | ``ServiceAccount`` | ``Role`` | ``RoleBinding`` | ``ConfigMap``):</span>
 
 <span class="sd">            The K8s objects to be deployed.</span>
 <span class="sd">            Can be iterable or single instance of the Resources type or a resource of any supported type.</span>
@@ -679,8 +679,8 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">    The actions are executed sequentially.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        on (:class:`~api.events.Event` | Iterable[:class:`~api.events.Event`]): List of events that trigger the actions</span>
-<span class="sd">        do: (:class:`~api.actions.Action` | Iterable[:class:`~api.actions.Action`]): List of actions to be triggered</span>
+<span class="sd">        on (``api.events.Event`` | Iterable[``api.events.Event``]): List of events that trigger the actions</span>
+<span class="sd">        do: (``api.actions.Action`` | Iterable[``api.actions.Action``]): List of actions to be triggered</span>
 <span class="sd">    """</span></div>
 
 
@@ -697,14 +697,14 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="w">    </span><span class="sd">"""Load resources from a docker-compose file.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        path (str | :class:`~RepoWorkingTree`): Path of the docker-compose file</span>
-<span class="sd">        workdir (str | :class:`~RepoWorkingTree`, optional): Specify an alternate working directory. Defaults to the directory containing the docker-compose file.</span>
+<span class="sd">        path (str | ``RepoWorkingTree``): Path of the docker-compose file</span>
+<span class="sd">        workdir (str | ``RepoWorkingTree``, optional): Specify an alternate working directory. Defaults to the directory containing the docker-compose file.</span>
 <span class="sd">        profiles (str | Iterable[str], optional): Specify a profile to enable. Defaults to [].</span>
 <span class="sd">        skip_consistency_check (bool, optional): Whether or not to perform a consistency check on the docker-compose file. Defaults to False.</span>
 <span class="sd">        env (dict[str, str], optional): Environment variables to add or override when evaluating the docker compose file. Defaults to {}.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~Resources`: A ``Resources`` object containing all the loaded K8s resources.</span>
+<span class="sd">        ``Resources``: A ``Resources`` object containing all the loaded K8s resources.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -718,10 +718,10 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">    Object kinds that aren't supported are ignored.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        path (str | :class:`~repoworkingtree.RepoWorkingTree`): path to the manifests file</span>
+<span class="sd">        path (str | ``repoworkingtree.RepoWorkingTree``): path to the manifests file</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~Resources`: A ``Resources`` object containing all the loaded K8s resources.</span>
+<span class="sd">        ``Resources``: A ``Resources`` object containing all the loaded K8s resources.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -742,13 +742,13 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
 <span class="sd">    Args:</span>
 <span class="sd">        name (str): Helm release name.</span>
-<span class="sd">        path (str | :class:`~RepoWorkingTree`): Path to chart. Relative to repo root, or from a different repository.</span>
+<span class="sd">        path (str | ``RepoWorkingTree``): Path to chart. Relative to repo root, or from a different repository.</span>
 <span class="sd">        values (dict[str, Any], optional): a dictionary of values to be passed to Helm. Will override values defined in the files. Defaults to {}.</span>
 <span class="sd">        version (str, optional): the version of Helm to use, currently, 3.10.1, 3.8.2 and 2.13.0 are supported. Defaults to "3.10.1".</span>
-<span class="sd">        values_files (str | :class:`~RepoWorkingTree` | Iterable[str  |  :class:`~RepoWorkingTree`], optional): Paths to files in the repo, or URLs. Same as when using ``helm template``, when passing multiple values files, the last one will override the previous files. Defaults to [].</span>
+<span class="sd">        values_files (str | ``RepoWorkingTree`` | Iterable[str  |  ``RepoWorkingTree``], optional): Paths to files in the repo, or URLs. Same as when using ``helm template``, when passing multiple values files, the last one will override the previous files. Defaults to [].</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~Resources`: A ``Resources`` object containing all the loaded K8s resources</span>
+<span class="sd">        ``Resources``: A ``Resources`` object containing all the loaded K8s resources</span>
 
 <span class="sd">    Examples:</span>
 
@@ -774,11 +774,11 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">    Object kinds that aren't supported are ignored.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        dir (str | :class:`~RepoWorkingTree`): The path of the dir containing the Kustomization file(s)</span>
+<span class="sd">        dir (str | ``RepoWorkingTree``): The path of the dir containing the Kustomization file(s)</span>
 <span class="sd">        helm_version (str, optional): the version of Helm to use, currently, 3.10.1, 3.8.2 and 2.13.0 are supported. Defaults to "3.10.1".</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~Resources`: A ``Resources`` object containing all the loaded K8s resources</span>
+<span class="sd">        ``Resources``: A ``Resources`` object containing all the loaded K8s resources</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -789,14 +789,14 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="k">def</span> <span class="nf">repo_volume</span><span class="p">(</span><span class="n">repo_working_tree</span><span class="p">:</span> <span class="n">RepoWorkingTree</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RepoVolume</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Returns a handle to the volume that contains a working tree of a repo.</span>
 <span class="sd">    Can be either the "current" rep - the one of this ``.raftt`` file, or another repo,</span>
-<span class="sd">    if a different :class:`~RepoWorkingTree` object is provided.</span>
+<span class="sd">    if a different ``RepoWorkingTree`` object is provided.</span>
 <span class="sd">    Can be used to mount the code into application containers and/or builder containers.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        repo_working_tree (:class:`~RepoWorkingTree`, optional): The repo working tree that will be in the created volume. Defaults to None, which means the repo is the repo of the current ``.raftt``.</span>
+<span class="sd">        repo_working_tree (``RepoWorkingTree``, optional): The repo working tree that will be in the created volume. Defaults to None, which means the repo is the repo of the current ``.raftt``.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~volumes.RepoVolume`: The RepoVolume object that can contains the repo and can be mounted into workloads.</span>
+<span class="sd">        ``volumes.RepoVolume``: The RepoVolume object that can contains the repo and can be mounted into workloads.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -811,7 +811,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">        name (str): The name of the secret</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~volumes.SecretVolume`: The SecretVolume object that can be mounted into workloads.</span>
+<span class="sd">        ``volumes.SecretVolume``: The SecretVolume object that can be mounted into workloads.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -820,13 +820,13 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <div class="viewcode-block" id="volume">
 <a class="viewcode-back" href="../index.html#api.volume">[docs]</a>
 <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Volume</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""Creates a volume that can be mounted to one or more :class:`~workload.Workload`.</span>
+<span class="w">    </span><span class="sd">"""Creates a volume that can be mounted to one or more ``workload.Workload``.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        name (str): The name of the created volume.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~volumes.Volume`: The Volume object that can be mounted into workloads.</span>
+<span class="sd">        ``volumes.Volume``: The Volume object that can be mounted into workloads.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -866,15 +866,15 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
     <span class="o">|</span> <span class="n">VsphereVirtualDiskVolumeSource</span>
     <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">EmptyDirVolumeSource</span><span class="p">(</span><span class="n">yaml</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">medium</span><span class="o">=</span><span class="s2">""</span><span class="p">),</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PodVolume</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""Creates a volume that can be mounted to a single :class:`~workload.Workload`, and can't be shared between different pods.</span>
-<span class="sd">    This is requiered when the env is deployed across multiple nodes.</span>
+<span class="w">    </span><span class="sd">"""Creates a volume that can be mounted to a single ``workload.Workload``, and can't be shared between different pods.</span>
+<span class="sd">    This is required when the env is deployed across multiple nodes.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        volume_source (VolumeSource): The underlying Kubernetes volume source &lt;https://kubernetes.io/docs/concepts/storage/volumes/#volume-types&gt;_ to be used for the volume.</span>
+<span class="sd">        volume_source (VolumeSource): The underlying Kubernetes `volume source &lt;https://kubernetes.io/docs/concepts/storage/volumes/#volume-types&gt;`_ to be used for the volume.</span>
 <span class="sd">                                      Defaults to EmptyDirVolumeSource().</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~volumes.PodVolume`: The Volume object that can be mounted into workloads.</span>
+<span class="sd">        ``volumes.PodVolume``: The Volume object that can be mounted into workloads.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -910,7 +910,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">    Only relevant for Raftt in connect-mode.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        resources (:class:`~Resources`): The resources to-be-deployed</span>
+<span class="sd">        resources (``Resources``): The resources to-be-deployed</span>
 <span class="sd">    """</span>
     <span class="k">pass</span></div>
 
@@ -919,16 +919,16 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <div class="viewcode-block" id="script_volume_initializer">
 <a class="viewcode-back" href="../index.html#api.script_volume_initializer">[docs]</a>
 <span class="k">def</span> <span class="nf">script_volume_initializer</span><span class="p">(</span><span class="n">workload</span><span class="p">:</span> <span class="n">Workload</span><span class="p">,</span> <span class="n">script</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">key_provider</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VolumeInitializer</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""Create a :class:`~volumes.VolumeInitializer` object that is initilized by a custom script.</span>
-<span class="sd">    The returned object can be assigned as an :class:`~volumes.Volume.initializer` of a :class:`~volumes.Volume` object.</span>
+<span class="w">    </span><span class="sd">"""Create a ``volumes.VolumeInitializer`` object that is initilized by a custom script.</span>
+<span class="sd">    The returned object can be assigned as an ``volumes.Volume.initializer`` of a ``volumes.Volume`` object.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        workload (:class:`~workload.Workload`): The workload that Raftt will enforce to be up when the script is running. This is done to guarantee that the seeded app (e.g. a DB) is running during the scrip execution.</span>
+<span class="sd">        workload (``workload.Workload``): The workload that Raftt will enforce to be up when the script is running. This is done to guarantee that the seeded app (e.g. a DB) is running during the scrip execution.</span>
 <span class="sd">        script (str): The path of the script in the workload</span>
 <span class="sd">        key_provider (str, optional): A script that creates a cache of the created seed. Used to cache seeding script outputs and reduce seeding time. Defaults to "".</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~volumes.VolumeInitializer`: A volume initializer object can be assigned as an :class:`~volumes.Volume.initializer` of a :class:`~volumes.Volume` object.</span>
+<span class="sd">        ``volumes.VolumeInitializer``: A volume initializer object can be assigned as an ``volumes.Volume.initializer`` of a ``volumes.Volume`` object.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -958,13 +958,13 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">    Only relevant to Raftt in orchestration-mode.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        workload (:class:`~workload.Workload`): The workload running the seeded postgres instance.</span>
-<span class="sd">        dump_file_path (str | :class:`~RepoWorkingTree`): The path of the dump file to be loaded.</span>
+<span class="sd">        workload (``workload.Workload``): The workload running the seeded postgres instance.</span>
+<span class="sd">        dump_file_path (str | ``RepoWorkingTree``): The path of the dump file to be loaded.</span>
 <span class="sd">        user (str): The user to be used to connect to the DB</span>
 <span class="sd">        key_provider (str, optional): A script that creates a cache of the created seed. Used to cache seeding script outputs and reduce seeding time. Defaults to "".</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~volumes.VolumeInitializer`: A volume initializer object can be assigned as an :class:`~volumes.Volume.initializer` of a :class:`~volumes.Volume` object.</span>
+<span class="sd">        ``volumes.VolumeInitializer``: A volume initializer object can be assigned as an ``volumes.Volume.initializer`` of a ``volumes.Volume`` object.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -982,12 +982,12 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">    Only relevant to Raftt in orchestration-mode.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        workload (:class:`~workload.Workload`): The workload running the seeded MongoDB instance.</span>
-<span class="sd">        dump_file_path (str | :class:`~RepoWorkingTree`): The path of the dump file to be loaded.</span>
+<span class="sd">        workload (``workload.Workload``): The workload running the seeded MongoDB instance.</span>
+<span class="sd">        dump_file_path (str | ``RepoWorkingTree``): The path of the dump file to be loaded.</span>
 <span class="sd">        key_provider (str, optional): A script that creates a cache of the created seed. Used to cache seeding script outputs and reduce seeding time. Defaults to "".</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~volumes.VolumeInitializer`: A volume initializer object can be assigned as an :class:`~volumes.Volume.initializer` of a :class:`~volumes.Volume` object.</span>
+<span class="sd">        ``volumes.VolumeInitializer``: A volume initializer object can be assigned as an ``volumes.Volume.initializer`` of a ``volumes.Volume`` object.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -1000,7 +1000,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">    Object kinds that aren't supported are ignored.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~Resources`: A ``Resources`` object containing all the loaded K8s resources</span>
+<span class="sd">        ``Resources``: A ``Resources`` object containing all the loaded K8s resources</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -1013,7 +1013,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">    Resources that are marked to be deployed using this function don't need to be deployed using the ``deploy`` function.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        resources (:class:`~Resources`): The ``Resources`` object containing the workload defining the dev container.</span>
+<span class="sd">        resources (``Resources``): The ``Resources`` object containing the workload defining the dev container.</span>
 <span class="sd">    """</span>
     <span class="k">pass</span></div>
 
@@ -1036,8 +1036,8 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 
 <span class="sd">    Args:</span>
 <span class="sd">        name (str): The ID to be used when referring to the image, e.g. in other Dockerfiles</span>
-<span class="sd">        context (str | :class:`~RepoWorkingTree`): The context for building the Dockerfile.</span>
-<span class="sd">        dockerfile (str | :class:`~RepoWorkingTree`, optional): The path of the Dockerfile. Equivalent to --file when using ``docker build``. Defaults to "&lt;context&gt;/Dockerfile".</span>
+<span class="sd">        context (str | ``RepoWorkingTree``): The context for building the Dockerfile.</span>
+<span class="sd">        dockerfile (str | ``RepoWorkingTree``, optional): The path of the Dockerfile. Equivalent to --file when using ``docker build``. Defaults to "&lt;context&gt;/Dockerfile".</span>
 <span class="sd">        args (dict[str, str], optional): the arguments passed to Dockerfile. Equivalent to --build-arg when using ``docker build``. Defaults to {}.</span>
 <span class="sd">        target (str, optional): Set the target build stage to build. Equivalent to --target when using ``docker build``. Defaults to "".</span>
 <span class="sd">        prebuild (str | Iterable[str], optional): A command to run in the dev container before the image is built. It is passed as a string or an iterable of strings. Defaults to "".</span>
@@ -1061,7 +1061,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">        repo (str): URL of the git repository.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~RepoWorkingTree`: A handle to the working tree.</span>
+<span class="sd">        ``RepoWorkingTree``: A handle to the working tree.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -1078,7 +1078,7 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">        branch (str): The branch to checkout.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        :class:`~RepoWorkingTree`: A handle to the working tree.</span>
+<span class="sd">        ``RepoWorkingTree``: A handle to the working tree.</span>
 <span class="sd">    """</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
@@ -1087,13 +1087,13 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <div class="viewcode-block" id="setup_container">
 <a class="viewcode-back" href="../index.html#api.setup_container">[docs]</a>
 <span class="k">def</span> <span class="nf">setup_container</span><span class="p">(</span><span class="n">resources</span><span class="p">:</span> <span class="n">Resources</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Define the :class:`~workload.Workload` to be used for the execution of lifecycle hooks.</span>
+<span class="w">    </span><span class="sd">"""Define the ``workload.Workload`` to be used for the execution of lifecycle hooks.</span>
 
 <span class="sd">    This function can't be used in the env definition file, only in the file that configure as the `envLifecycleHooks` attribute in `raftt.yml`.</span>
 <span class="sd">    Only relevant for orchestration mode.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        resources (:class:`~Resources`): The ``Resources`` object containing the workload to be used. Must contain a single :class:`~workload.Workload`.</span>
+<span class="sd">        resources (``Resources``): The ``Resources`` object containing the workload to be used. Must contain a single ``workload.Workload``.</span>
 <span class="sd">    """</span>
     <span class="k">pass</span></div>
 
