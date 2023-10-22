@@ -1,8 +1,8 @@
-<!DOCTYPE html><html class="no-js" lang="en"><head><meta charset="utf-8">
+<!DOCTYPE html><html class="no-js" lang="en" data-content_root="../../"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html">
 
-    <!-- Generated with Sphinx 7.2.2 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>api.workload - Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -434,7 +434,20 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
           </label>
         </div>
         <article role="main">
-          <h1>Source code for api.workload</h1><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">api.k8s</span> <span class="kn">import</span> <span class="n">Container</span><span class="p">,</span> <span class="n">Pod</span><span class="p">,</span> <span class="n">Deployment</span><span class="p">,</span> <span class="n">StatefulSet</span>
+          <h1>Source code for api.workload</h1><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">api.k8s</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">ConfigMap</span><span class="p">,</span>
+    <span class="n">Container</span><span class="p">,</span>
+    <span class="n">Ingress</span><span class="p">,</span>
+    <span class="n">Pod</span><span class="p">,</span>
+    <span class="n">Deployment</span><span class="p">,</span>
+    <span class="n">Role</span><span class="p">,</span>
+    <span class="n">RoleBinding</span><span class="p">,</span>
+    <span class="n">Secret</span><span class="p">,</span>
+    <span class="n">Service</span><span class="p">,</span>
+    <span class="n">ServiceAccount</span><span class="p">,</span>
+    <span class="n">StatefulSet</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">api.common</span> <span class="kn">import</span> <span class="n">CommonK8sResource</span>
 <span class="kn">from</span> <span class="nn">api.volumes</span> <span class="kn">import</span> <span class="n">Volume</span>
 <span class="kn">from</span> <span class="nn">api.repoworkingtree</span> <span class="kn">import</span> <span class="n">RepoWorkingTree</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterable</span>
@@ -570,6 +583,17 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
 
+<div class="viewcode-block" id="Workload.restart_on_termination">
+<a class="viewcode-back" href="../../index.html#api.workload.Workload.restart_on_termination">[docs]</a>
+    <span class="k">def</span> <span class="nf">restart_on_termination</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">no_restart</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">container</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Indicate whether the process should be restarted after exiting.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            no_restart (bool, optional): If True disable restarting the process after exiting. Defaults to False.</span>
+<span class="sd">            container (str, optional): Name of the container of which to control the restart of the process. Defaults to main container.</span>
+<span class="sd">        """</span></div>
+
+
 <div class="viewcode-block" id="Workload.sync">
 <a class="viewcode-back" href="../../index.html#api.workload.Workload.sync">[docs]</a>
     <span class="k">def</span> <span class="nf">sync</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">src</span><span class="p">:</span> <span class="n">RepoWorkingTree</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dst</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ignore</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">container</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">):</span>
@@ -582,6 +606,19 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <span class="sd">            container (str, optional): Name of the container to sync to, if empty the default container is selected. Defaults to "".</span>
 <span class="sd">        """</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Workload.dev_with">
+<a class="viewcode-back" href="../../index.html#api.workload.Workload.dev_with">[docs]</a>
+    <span class="k">def</span> <span class="nf">dev_with</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">resources</span><span class="p">:</span> <span class="s2">"Iterable[ Resources | Pod  | Deployment | StatefulSet | Ingress | Service | Secret | ServiceAccount | Role | RoleBinding | ConfigMap | CommonK8sResource ]"</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Specify additional resources to be devified when this workload is devified.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            resources (Iterable[ ``Resources``  |  ``Pod``  |  ``Deployment``  |  ``StatefulSet``  |  ``Ingress``  |  ``Service``  |  ``Secret``  |  ``ServiceAccount``  |  ``Role``  |  ``RoleBinding``  |  ``ConfigMap``  |  ``CommonK8sResource`` ]): The additional resources to devify.</span>
+<span class="sd">        """</span></div>
 </div>
 
 
@@ -604,6 +641,133 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <a class="viewcode-back" href="../../index.html#api.workload.StatefulSet">[docs]</a>
 <span class="k">class</span> <span class="nc">StatefulSet</span><span class="p">(</span><span class="n">StatefulSet</span><span class="p">,</span> <span class="n">Workload</span><span class="p">):</span>
     <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="Resources">
+<a class="viewcode-back" href="../../index.html#api.workload.Resources">[docs]</a>
+<span class="k">class</span> <span class="nc">Resources</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""A Resources object contains several dicts, one for each supported resource type.</span>
+
+<span class="sd">    Example:</span>
+
+<span class="sd">      .. code-block:: python</span>
+
+<span class="sd">        resources = k8s_manifests("./k8s_manifests") # Can also use Docker Compose and Helm</span>
+<span class="sd">        print(type(resources)) # Will print "Resources"</span>
+
+<span class="sd">        # You can modify the imported resources</span>
+<span class="sd">        nginx = resources.pods["nginx"]</span>
+<span class="sd">        nginx.map_port(local=8080, remote=80)</span>
+<span class="sd">    """</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">deployments</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Deployment</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Deployments in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, Deployment]: A dict that maps the Deployment name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pods</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Pod</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Pods in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, Pod]: A dict that maps the Pod name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">statefulsets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">StatefulSet</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes StatefulSets in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, StatefulSet]: A dict that maps the StatefulSet name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">services</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Service</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Services in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, Service]: A dict that maps the Service name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ingresses</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Ingress</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Ingresses in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, Ingress]: A dict that maps the Ingress name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">secrets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Secret</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Secrets in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, Secret]: A dict that maps the Secret name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">configmaps</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ConfigMap</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes ConfigMaps in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, ConfigMap]: A dict that maps the ConfigMap name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">namedvolumes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Volume</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes NamedVolumes in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, Volume]: A dict that maps the NamedVolume name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">roles</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Role</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes Roles in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, Role]: A dict that maps the Role name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rolebindings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">RoleBinding</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes RoleBindings in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, RoleBinding]: A dict that maps the RoleBinding name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">serviceaccounts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ServiceAccount</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes ServiceAccounts in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, ServiceAccount]: A dict that maps the ServiceAccount name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">crds</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">CommonK8sResource</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""A dict of Kubernetes CRDs in the ``Resources`` object.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict[str, CommonK8sResource]: A dict that maps the CRD name to the K8s resource itself</span>
+<span class="sd">        """</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
 </pre></div>
         </article>

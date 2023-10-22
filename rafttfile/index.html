@@ -1,9 +1,9 @@
-<!DOCTYPE html><html class="no-js" lang="en"><head><meta charset="utf-8">
+<!DOCTYPE html><html class="no-js" lang="en" data-content_root="./"><head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html">
 
-    <!-- Generated with Sphinx 7.2.2 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Raftt documentation</title>
       <style>.highlight pre { line-height: 125%; }
 .highlight td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -443,209 +443,6 @@ body:not([data-theme="light"]) .highlight .il { color: #51b2fd } /* Literal.Numb
 <p>📝 Back to <a class="reference external" href="https://docs.raftt.io/">docs</a></p>
 </div>
 <p id="module-api">The API module</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="api.CommonK8sResource">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">CommonK8sResource</span></span><a class="reference internal" href="_modules/api.html#CommonK8sResource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.CommonK8sResource" title="Link to this definition">#</a></dt>
-<dd><p>An object that represents a Kubernetes CRD</p>
-<dl class="py property">
-<dt class="sig sig-object py" id="api.CommonK8sResource.metadata">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ObjectMeta</span></em><a class="headerlink" href="#api.CommonK8sResource.metadata" title="Link to this definition">#</a></dt>
-<dd><p>Kubernetes object metadata</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The object metadata</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>k8s.ObjectMeta</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="api.Resources">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">Resources</span></span><a class="reference internal" href="_modules/api.html#Resources"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.Resources" title="Link to this definition">#</a></dt>
-<dd><p>A Resources object contains several dicts, one for each supported resource type.</p>
-<p class="rubric">Example</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resources</span> <span class="o">=</span> <span class="n">k8s_manifests</span><span class="p">(</span><span class="s2">"./k8s_manifests"</span><span class="p">)</span> <span class="c1"># Can also use Docker Compose and Helm</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">resources</span><span class="p">))</span> <span class="c1"># Will print "Resources"</span>
-
-<span class="c1"># You can modify the imported resources</span>
-<span class="n">nginx</span> <span class="o">=</span> <span class="n">resources</span><span class="o">.</span><span class="n">pods</span><span class="p">[</span><span class="s2">"nginx"</span><span class="p">]</span>
-<span class="n">nginx</span><span class="o">.</span><span class="n">map_port</span><span class="p">(</span><span class="n">local</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span> <span class="n">remote</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.configmaps">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configmaps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ConfigMap</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.configmaps" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes ConfigMaps in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the ConfigMap name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, ConfigMap]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.crds">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">crds</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.CommonK8sResource" title="api.CommonK8sResource"><span class="pre">CommonK8sResource</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.crds" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes CRDs in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the CRD name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, <a class="reference internal" href="#api.CommonK8sResource" title="api.CommonK8sResource">CommonK8sResource</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.deployments">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deployments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment"><span class="pre">Deployment</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.deployments" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Deployments in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the Deployment name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, <a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment">Deployment</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.ingresses">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ingresses</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Ingress</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.ingresses" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Ingresses in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the Ingress name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, Ingress]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.namedvolumes">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">namedvolumes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume"><span class="pre">Volume</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.namedvolumes" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes NamedVolumes in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the NamedVolume name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, <a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume">Volume</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.pods">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pods</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod"><span class="pre">Pod</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.pods" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Pods in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the Pod name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, <a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod">Pod</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.rolebindings">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rolebindings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">RoleBinding</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.rolebindings" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes RoleBindings in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the RoleBinding name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, RoleBinding]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.roles">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">roles</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Role</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.roles" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Roles in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the Role name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, Role]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.secrets">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">secrets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Secret</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.secrets" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Secrets in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the Secret name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, Secret]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.serviceaccounts">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serviceaccounts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ServiceAccount</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.serviceaccounts" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes ServiceAccounts in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the ServiceAccount name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, ServiceAccount]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.services">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">services</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Service</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.services" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes Services in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the Service name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, Service]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="api.Resources.statefulsets">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">statefulsets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet"><span class="pre">StatefulSet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.Resources.statefulsets" title="Link to this definition">#</a></dt>
-<dd><p>A dict of Kubernetes StatefulSets in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dict that maps the StatefulSet name to the K8s resource itself</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>dict[str, <a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet">StatefulSet</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
 <dl class="py function">
 <dt class="sig sig-object py" id="api.build_image">
 <span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">build_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">repoworkingtree.RepoWorkingTree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dockerfile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">repoworkingtree.RepoWorkingTree</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Dockerfile'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prebuild</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">collections.abc.Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secrets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#build_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.build_image" title="Link to this definition">#</a></dt>
@@ -736,7 +533,7 @@ This is useful to prevent GitOps tools from reverting the changes made by Raftt 
 
 <dl class="py function">
 <dt class="sig sig-object py" id="api.deploy">
-<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">deploy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#api.Resources" title="api.Resources"><span class="pre">Resources</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod"><span class="pre">workload.Pod</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment"><span class="pre">workload.Deployment</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet"><span class="pre">workload.StatefulSet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Ingress</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Service</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Secret</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ServiceAccount</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Role</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.RoleBinding</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ConfigMap</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.Resources" title="api.Resources"><span class="pre">Resources</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod"><span class="pre">workload.Pod</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment"><span class="pre">workload.Deployment</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet"><span class="pre">workload.StatefulSet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Ingress</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Service</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Secret</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ServiceAccount</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Role</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.RoleBinding</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ConfigMap</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#deploy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.deploy" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">deploy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#api.workload.Resources" title="api.workload.Resources"><span class="pre">workload.Resources</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod"><span class="pre">workload.Pod</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment"><span class="pre">workload.Deployment</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet"><span class="pre">workload.StatefulSet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Ingress</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Service</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Secret</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ServiceAccount</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Role</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.RoleBinding</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ConfigMap</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Resources" title="api.workload.Resources"><span class="pre">workload.Resources</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod"><span class="pre">workload.Pod</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment"><span class="pre">workload.Deployment</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet"><span class="pre">workload.StatefulSet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Ingress</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Service</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Secret</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ServiceAccount</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Role</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.RoleBinding</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ConfigMap</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#deploy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.deploy" title="Link to this definition">#</a></dt>
 <dd><p>Mark the resources to be deployed when the <code class="docutils literal notranslate"><span class="pre">.raftt</span></code> file interpretation is completed after <code class="docutils literal notranslate"><span class="pre">up</span></code>, <code class="docutils literal notranslate"><span class="pre">rebuild</span></code>, and <code class="docutils literal notranslate"><span class="pre">dev</span></code> commands.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -748,7 +545,7 @@ Can be iterable or single instance of the Resources type or a resource of any su
 
 <dl class="py function">
 <dt class="sig sig-object py" id="api.deploy_dev_container">
-<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">deploy_dev_container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.Resources" title="api.Resources"><span class="pre">Resources</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#deploy_dev_container"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.deploy_dev_container" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">deploy_dev_container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.workload.Resources" title="api.workload.Resources"><span class="pre">workload.Resources</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#deploy_dev_container"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.deploy_dev_container" title="Link to this definition">#</a></dt>
 <dd><p>Mark a workload to be deployed as a <a class="reference external" href="https://docs.raftt.io/config/dev_container">dev container</a>.
 Resources that are marked to be deployed using this function don’t need to be deployed using the <code class="docutils literal notranslate"><span class="pre">deploy</span></code> function.</p>
 <dl class="field-list simple">
@@ -760,7 +557,7 @@ Resources that are marked to be deployed using this function don’t need to be 
 
 <dl class="py function">
 <dt class="sig sig-object py" id="api.deploy_on_connect">
-<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">deploy_on_connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.Resources" title="api.Resources"><span class="pre">Resources</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#deploy_on_connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.deploy_on_connect" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">deploy_on_connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.workload.Resources" title="api.workload.Resources"><span class="pre">workload.Resources</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#deploy_on_connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.deploy_on_connect" title="Link to this definition">#</a></dt>
 <dd><p>Mark the Kubernetes resources to be deployed to the env when running <code class="docutils literal notranslate"><span class="pre">raftt</span> <span class="pre">connect</span></code>.
 Resources that are marked to be deployed using this function don’t need to be deployed using the <code class="docutils literal notranslate"><span class="pre">deploy</span></code> function.</p>
 <p>Only relevant for Raftt in connect-mode.</p>
@@ -1170,7 +967,7 @@ Leaving this as True (default) scales down the original workload to 0, rescaling
 
 <dl class="py function">
 <dt class="sig sig-object py" id="api.setup_container">
-<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">setup_container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.Resources" title="api.Resources"><span class="pre">Resources</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#setup_container"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.setup_container" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre"></span></span><span class="sig-name descname"><span class="pre">setup_container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#api.workload.Resources" title="api.workload.Resources"><span class="pre">workload.Resources</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api.html#setup_container"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.setup_container" title="Link to this definition">#</a></dt>
 <dd><p>Define the <code class="docutils literal notranslate"><span class="pre">workload.Workload</span></code> to be used for the execution of lifecycle hooks.</p>
 <p>This function can’t be used in the env definition file, only in the file that configure as the <cite>envLifecycleHooks</cite> attribute in <cite>raftt.yml</cite>.
 Only relevant for orchestration mode.</p>
@@ -1232,6 +1029,189 @@ This information is sent from the client to the env every time the <code class="
 <dd></dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="api.workload.Resources">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">workload.</span></span><span class="sig-name descname"><span class="pre">Resources</span></span><a class="reference internal" href="_modules/api/workload.html#Resources"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.workload.Resources" title="Link to this definition">#</a></dt>
+<dd><p>A Resources object contains several dicts, one for each supported resource type.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resources</span> <span class="o">=</span> <span class="n">k8s_manifests</span><span class="p">(</span><span class="s2">"./k8s_manifests"</span><span class="p">)</span> <span class="c1"># Can also use Docker Compose and Helm</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">resources</span><span class="p">))</span> <span class="c1"># Will print "Resources"</span>
+
+<span class="c1"># You can modify the imported resources</span>
+<span class="n">nginx</span> <span class="o">=</span> <span class="n">resources</span><span class="o">.</span><span class="n">pods</span><span class="p">[</span><span class="s2">"nginx"</span><span class="p">]</span>
+<span class="n">nginx</span><span class="o">.</span><span class="n">map_port</span><span class="p">(</span><span class="n">local</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span> <span class="n">remote</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.configmaps">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configmaps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ConfigMap</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.configmaps" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes ConfigMaps in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the ConfigMap name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, ConfigMap]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.crds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">crds</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">CommonK8sResource</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.crds" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes CRDs in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the CRD name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, CommonK8sResource]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.deployments">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deployments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment"><span class="pre">Deployment</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.deployments" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes Deployments in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the Deployment name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, <a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment">Deployment</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.ingresses">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ingresses</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Ingress</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.ingresses" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes Ingresses in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the Ingress name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, Ingress]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.namedvolumes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">namedvolumes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume"><span class="pre">Volume</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.namedvolumes" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes NamedVolumes in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the NamedVolume name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, <a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume">Volume</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.pods">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pods</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod"><span class="pre">Pod</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.pods" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes Pods in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the Pod name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, <a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod">Pod</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.rolebindings">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rolebindings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">RoleBinding</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.rolebindings" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes RoleBindings in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the RoleBinding name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, RoleBinding]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.roles">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">roles</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Role</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.roles" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes Roles in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the Role name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, Role]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.secrets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">secrets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Secret</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.secrets" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes Secrets in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the Secret name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, Secret]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.serviceaccounts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serviceaccounts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ServiceAccount</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.serviceaccounts" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes ServiceAccounts in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the ServiceAccount name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, ServiceAccount]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.services">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">services</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Service</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.services" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes Services in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the Service name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, Service]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="api.workload.Resources.statefulsets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">statefulsets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet"><span class="pre">StatefulSet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#api.workload.Resources.statefulsets" title="Link to this definition">#</a></dt>
+<dd><p>A dict of Kubernetes StatefulSets in the <code class="docutils literal notranslate"><span class="pre">Resources</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict that maps the StatefulSet name to the K8s resource itself</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict[str, <a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet">StatefulSet</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="api.workload.StatefulSet">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">workload.</span></span><span class="sig-name descname"><span class="pre">StatefulSet</span></span><a class="reference internal" href="_modules/api/workload.html#StatefulSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.workload.StatefulSet" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
@@ -1280,6 +1260,17 @@ This allows running different Raftt commands in the workload.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>container</strong> (<em>str</em><em>, </em><em>optional</em>) – specify a container to mount the executable to. Defaults to “”, which means the container is the workload’s default container.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="api.workload.Workload.dev_with">
+<span class="sig-name descname"><span class="pre">dev_with</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#api.workload.Resources" title="api.workload.Resources"><span class="pre">workload.Resources</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Pod" title="api.workload.Pod"><span class="pre">workload.Pod</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.Deployment" title="api.workload.Deployment"><span class="pre">workload.Deployment</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#api.workload.StatefulSet" title="api.workload.StatefulSet"><span class="pre">workload.StatefulSet</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Ingress</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Service</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Secret</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ServiceAccount</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.Role</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.RoleBinding</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">k8s.ConfigMap</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">common.CommonK8sResource</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/workload.html#Workload.dev_with"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.workload.Workload.dev_with" title="Link to this definition">#</a></dt>
+<dd><p>Specify additional resources to be devified when this workload is devified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>resources</strong> (Iterable[ <code class="docutils literal notranslate"><span class="pre">Resources</span></code>  |  <code class="docutils literal notranslate"><span class="pre">Pod</span></code>  |  <code class="docutils literal notranslate"><span class="pre">Deployment</span></code>  |  <code class="docutils literal notranslate"><span class="pre">StatefulSet</span></code>  |  <code class="docutils literal notranslate"><span class="pre">Ingress</span></code>  |  <code class="docutils literal notranslate"><span class="pre">Service</span></code>  |  <code class="docutils literal notranslate"><span class="pre">Secret</span></code>  |  <code class="docutils literal notranslate"><span class="pre">ServiceAccount</span></code>  |  <code class="docutils literal notranslate"><span class="pre">Role</span></code>  |  <code class="docutils literal notranslate"><span class="pre">RoleBinding</span></code>  |  <code class="docutils literal notranslate"><span class="pre">ConfigMap</span></code>  |  <code class="docutils literal notranslate"><span class="pre">CommonK8sResource</span></code> ]) – The additional resources to devify.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1346,6 +1337,20 @@ See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#r
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Name of the volume to replace</p></li>
 <li><p><strong>source</strong> (<a class="reference internal" href="#api.volumes.Volume" title="api.volumes.Volume"><em>Volume</em></a>) – new named volume instance</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="api.workload.Workload.restart_on_termination">
+<span class="sig-name descname"><span class="pre">restart_on_termination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">no_restart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/workload.html#Workload.restart_on_termination"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.workload.Workload.restart_on_termination" title="Link to this definition">#</a></dt>
+<dd><p>Indicate whether the process should be restarted after exiting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>no_restart</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True disable restarting the process after exiting. Defaults to False.</p></li>
+<li><p><strong>container</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the container of which to control the restart of the process. Defaults to main container.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1672,9 +1677,9 @@ See <a class="reference external" href="https://docs.raftt.io/config/rafttfile#f
 </dd></dl>
 
 </section>
-<section id="string-encoding">
-<h1>String encoding<a class="headerlink" href="#string-encoding" title="Link to this heading">#</a></h1>
-<p id="module-api.json">json provides functions for working with json data</p>
+<section id="module-api.json">
+<span id="string-encoding"></span><h1>String encoding<a class="headerlink" href="#module-api.json" title="Link to this heading">#</a></h1>
+<p>json provides functions for working with json data</p>
 <p>Import as:</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="s2">"encoding/json.star"</span><span class="p">,</span> <span class="s2">"json"</span><span class="p">)</span>
@@ -1739,7 +1744,7 @@ Decoding fails if src is not a valid JSON string.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>src</strong> (<em>str</em>) – source JSON string to encode</p></li>
 <li><p><strong>prefix</strong> (<em>str</em><em>, </em><em>optional</em>) – string prefix that will be prepended to each line.. Defaults to “”.</p></li>
-<li><p><strong>indent</strong> (<em>str</em><em>, </em><em>optional</em>) – string that will be used to represent indentations. Defaults to ”       “.</p></li>
+<li><p><strong>indent</strong> (<em>str</em><em>, </em><em>optional</em>) – string that will be used to represent indentations. Defaults to “       “.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1876,25 +1881,6 @@ Decoding fails if src is not a valid YAML string.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">.raftt</span></code> File API Reference</a><ul>
-<li><a class="reference internal" href="#api.CommonK8sResource"><code class="docutils literal notranslate"><span class="pre">CommonK8sResource</span></code></a><ul>
-<li><a class="reference internal" href="#api.CommonK8sResource.metadata"><code class="docutils literal notranslate"><span class="pre">CommonK8sResource.metadata</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#api.Resources"><code class="docutils literal notranslate"><span class="pre">Resources</span></code></a><ul>
-<li><a class="reference internal" href="#api.Resources.configmaps"><code class="docutils literal notranslate"><span class="pre">Resources.configmaps</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.crds"><code class="docutils literal notranslate"><span class="pre">Resources.crds</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.deployments"><code class="docutils literal notranslate"><span class="pre">Resources.deployments</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.ingresses"><code class="docutils literal notranslate"><span class="pre">Resources.ingresses</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.namedvolumes"><code class="docutils literal notranslate"><span class="pre">Resources.namedvolumes</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.pods"><code class="docutils literal notranslate"><span class="pre">Resources.pods</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.rolebindings"><code class="docutils literal notranslate"><span class="pre">Resources.rolebindings</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.roles"><code class="docutils literal notranslate"><span class="pre">Resources.roles</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.secrets"><code class="docutils literal notranslate"><span class="pre">Resources.secrets</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.serviceaccounts"><code class="docutils literal notranslate"><span class="pre">Resources.serviceaccounts</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.services"><code class="docutils literal notranslate"><span class="pre">Resources.services</span></code></a></li>
-<li><a class="reference internal" href="#api.Resources.statefulsets"><code class="docutils literal notranslate"><span class="pre">Resources.statefulsets</span></code></a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#api.build_image"><code class="docutils literal notranslate"><span class="pre">build_image()</span></code></a></li>
 <li><a class="reference internal" href="#api.clone_repo_branch"><code class="docutils literal notranslate"><span class="pre">clone_repo_branch()</span></code></a></li>
 <li><a class="reference internal" href="#api.configure_cred_helper"><code class="docutils literal notranslate"><span class="pre">configure_cred_helper()</span></code></a></li>
@@ -1929,16 +1915,33 @@ Decoding fails if src is not a valid YAML string.</p>
 <li><a class="reference internal" href="#api.local.env"><code class="docutils literal notranslate"><span class="pre">env</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Deployment"><code class="docutils literal notranslate"><span class="pre">Deployment</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Pod"><code class="docutils literal notranslate"><span class="pre">Pod</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources"><code class="docutils literal notranslate"><span class="pre">Resources</span></code></a><ul>
+<li><a class="reference internal" href="#api.workload.Resources.configmaps"><code class="docutils literal notranslate"><span class="pre">Resources.configmaps</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.crds"><code class="docutils literal notranslate"><span class="pre">Resources.crds</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.deployments"><code class="docutils literal notranslate"><span class="pre">Resources.deployments</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.ingresses"><code class="docutils literal notranslate"><span class="pre">Resources.ingresses</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.namedvolumes"><code class="docutils literal notranslate"><span class="pre">Resources.namedvolumes</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.pods"><code class="docutils literal notranslate"><span class="pre">Resources.pods</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.rolebindings"><code class="docutils literal notranslate"><span class="pre">Resources.rolebindings</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.roles"><code class="docutils literal notranslate"><span class="pre">Resources.roles</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.secrets"><code class="docutils literal notranslate"><span class="pre">Resources.secrets</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.serviceaccounts"><code class="docutils literal notranslate"><span class="pre">Resources.serviceaccounts</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.services"><code class="docutils literal notranslate"><span class="pre">Resources.services</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Resources.statefulsets"><code class="docutils literal notranslate"><span class="pre">Resources.statefulsets</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#api.workload.StatefulSet"><code class="docutils literal notranslate"><span class="pre">StatefulSet</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload"><code class="docutils literal notranslate"><span class="pre">Workload</span></code></a><ul>
 <li><a class="reference internal" href="#api.workload.Workload.add_dependency"><code class="docutils literal notranslate"><span class="pre">Workload.add_dependency()</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload.add_env_vars"><code class="docutils literal notranslate"><span class="pre">Workload.add_env_vars()</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload.add_raftt_cli"><code class="docutils literal notranslate"><span class="pre">Workload.add_raftt_cli()</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Workload.dev_with"><code class="docutils literal notranslate"><span class="pre">Workload.dev_with()</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload.get_container"><code class="docutils literal notranslate"><span class="pre">Workload.get_container()</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload.map_port"><code class="docutils literal notranslate"><span class="pre">Workload.map_port()</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload.mount"><code class="docutils literal notranslate"><span class="pre">Workload.mount()</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload.name"><code class="docutils literal notranslate"><span class="pre">Workload.name</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload.replace_volume"><code class="docutils literal notranslate"><span class="pre">Workload.replace_volume()</span></code></a></li>
+<li><a class="reference internal" href="#api.workload.Workload.restart_on_termination"><code class="docutils literal notranslate"><span class="pre">Workload.restart_on_termination()</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload.set_default_container"><code class="docutils literal notranslate"><span class="pre">Workload.set_default_container()</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload.set_env_vars"><code class="docutils literal notranslate"><span class="pre">Workload.set_env_vars()</span></code></a></li>
 <li><a class="reference internal" href="#api.workload.Workload.sync"><code class="docutils literal notranslate"><span class="pre">Workload.sync()</span></code></a></li>
@@ -1981,7 +1984,7 @@ Decoding fails if src is not a valid YAML string.</p>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#string-encoding">String encoding</a><ul>
+<li><a class="reference internal" href="#module-api.json">String encoding</a><ul>
 <li><a class="reference internal" href="#api.json.decode"><code class="docutils literal notranslate"><span class="pre">decode()</span></code></a></li>
 <li><a class="reference internal" href="#api.json.encode"><code class="docutils literal notranslate"><span class="pre">encode()</span></code></a></li>
 <li><a class="reference internal" href="#api.json.indent"><code class="docutils literal notranslate"><span class="pre">indent()</span></code></a></li>
